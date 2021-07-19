@@ -12,12 +12,12 @@ class Window(Frame):
         exitButton.place(x=900, y=160)
 
         #adding title and body
-        text1 = Label(self, text="Welcome!", bg="#996Db6", font=("Helvetica", 25))
+        text1 = Label(self, text="Welcome!", bg="#996Db6", font=("Geneva", 25))
         text1.place(x=70,y=90)
 
         text2 = Label(self,
                       text="Welcome to My Threat Model. Please select your devices to get started.",
-                      bg="#996Db6", font=("Helvetica",15))
+                      bg="#996Db6", font=("Geneva",15))
         text2.place(x=70,y=130)
 
     #Define what clicking the exit button does
