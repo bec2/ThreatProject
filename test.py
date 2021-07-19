@@ -24,15 +24,21 @@ class Window(Frame):
     def clickExitButton(self):
         exit()
 
+
 #establishing a root window for the software
 root = Tk()
 app = Window(root)
+
+c=Checkbutton(root, text="test1")
+c.pack()
+
+c2=Checkbutton(root, text="test2")
+c2.pack()
 
 #naming the window and setting a size
 root.wm_title("My Threat Model")
 root.geometry("1000x200")
 app['bg']='#996Db6'
-
 
 #run
 root.mainloop()
