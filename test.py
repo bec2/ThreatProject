@@ -29,11 +29,45 @@ class Window(Frame):
 root = Tk()
 app = Window(root)
 
-c=Checkbutton(root, text="test1")
+#some tickboxes
+c=Checkbutton(root, text="Home Virtual Assistant (e.g. Alexa, Home)")
 c.pack()
 
-c2=Checkbutton(root, text="test2")
+c2=Checkbutton(root, text="Bitdefender BOX")
 c2.pack()
+
+c3=Checkbutton(root, text="Smart security cameras (e.g. Nest Cam)")
+c3.pack()
+
+c4=Checkbutton(root, text="Smart doorbell (e.g. Ring)")
+c4.pack()
+
+c5=Checkbutton(root, text="Smart lighting (e.g. Hue)")
+c5.pack()
+
+c6=Checkbutton(root, text="Smart fitness aids (e.g. SmartMat)")
+c6.pack()
+
+c7=Checkbutton(root, text="Smart kitchenwear")
+c7.pack
+
+c8=Checkbutton(root, text="Smart home security locks")
+c8.pack
+
+c9=Checkbutton(root, text="Amazon IoT Dash Button")
+c9.pack
+
+c10=Checkbutton(root, text="Smart thermostats and air monitors")
+c10.pack
+
+c11=Checkbutton(root, text="Automated 'smart home' controller")
+c11.pack
+
+c12=Checkbutton(root, text="Smart sleep tracker")
+c12.pack
+
+c13=Checkbutton(root, text="Any other smart home devices")
+c13.pack
 
 #naming the window and setting a size
 root.wm_title("My Threat Model")
