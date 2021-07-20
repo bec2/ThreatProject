@@ -9,10 +9,6 @@ class Window(Frame):
         Frame.__init__(self, master)
         self.master=master
         self.pack(fill=BOTH, expand=1)
-        
-        #Our window should have an exit button at all times
-        exitButton = Button(self, text="Quit", command=self.clickExitButton)
-        exitButton.place(x=900, y=160)
 
         #adding title and body
         text1 = Label(self, text="Welcome!", bg="#996Db6", font=("Geneva", 25))
@@ -81,6 +77,10 @@ class Window(Frame):
         c13=Checkbutton(root, text="Any other smart home devices",
                         variable=d13)
         c13.pack()
+
+        #Exit button
+        exitButton = Button(self, text="Quit", command=self.clickExitButton)
+        exitButton.place(x=900, y=160)
 
     #Define what clicking the exit button does
     def clickExitButton(self):
