@@ -34,46 +34,60 @@ root.wm_title("My Threat Model")
 root.geometry("1000x500")
 app['bg']='#996Db6'
 
-#some tickboxes
-c=Checkbutton(root, text="Home Virtual Assistant (e.g. Alexa, Home)")
-c.pack()
+#device tickboxes, the toggle status is stored in the corresponding d intvar
+d1=IntVar()
+c1=Checkbutton(root, text="Home Virtual Assistant (e.g. Alexa, Home)",
+               variable=d1)
+c1.pack()
 
-c2=Checkbutton(root, text="Bitdefender BOX")
+d2=IntVar()
+c2=Checkbutton(root, text="Bitdefender BOX", variable=d2)
 c2.pack()
 
-c3=Checkbutton(root, text="Smart security cameras (e.g. Nest Cam)")
+d3=IntVar()
+c3=Checkbutton(root, text="Smart security cameras (e.g. Nest Cam)",
+               variable=d3)
 c3.pack()
 
-c4=Checkbutton(root, text="Smart doorbell (e.g. Ring)")
+d4=IntVar()
+c4=Checkbutton(root, text="Smart doorbell (e.g. Ring)", variable=d4)
 c4.pack()
 
-c5=Checkbutton(root, text="Smart lighting (e.g. Hue)")
+d5=IntVar()
+c5=Checkbutton(root, text="Smart lighting (e.g. Hue)", variable=d5)
 c5.pack()
 
-c6=Checkbutton(root, text="Smart fitness aids (e.g. SmartMat)")
+d6=IntVar()
+c6=Checkbutton(root, text="Smart fitness aids (e.g. SmartMat)", variable=d6)
 c6.pack()
 
-c7=Checkbutton(root, text="Smart kitchenwear")
+d7=IntVar()
+c7=Checkbutton(root, text="Smart kitchenwear", variable=d7)
 c7.pack()
 
-c8=Checkbutton(root, text="Smart home security locks")
+d8=IntVar()
+c8=Checkbutton(root, text="Smart home security locks", variable=d8)
 c8.pack()
 
-c9=Checkbutton(root, text="Amazon IoT Dash Button")
+d9=IntVar()
+c9=Checkbutton(root, text="Amazon IoT Dash Button", variable=d9)
 c9.pack()
 
-c10=Checkbutton(root, text="Smart thermostats and air monitors")
+d10=IntVar()
+c10=Checkbutton(root, text="Smart thermostats and air monitors", variable=d10)
 c10.pack()
 
-c11=Checkbutton(root, text="Automated 'smart home' controller")
+d11=IntVar()
+c11=Checkbutton(root, text="Automated 'smart home' controller", variable=d11)
 c11.pack()
 
-c12=Checkbutton(root, text="Smart sleep tracker")
+d12=IntVar()
+c12=Checkbutton(root, text="Smart sleep tracker", variable=d12)
 c12.pack()
 
-c13=Checkbutton(root, text="Any other smart home devices")
+d13=IntVar()
+c13=Checkbutton(root, text="Any other smart home devices", variable=d13)
 c13.pack()
-
 
 
 #run
