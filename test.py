@@ -4,23 +4,32 @@ from tkinter import *
 root=Tk()
 
 #Establishing the variables for added devices
-d1=IntVar()
-d2=IntVar()
-d3=IntVar()
-d4=IntVar()
-d5=IntVar()
-d6=IntVar()
-d7=IntVar()
-d8=IntVar()
-d9=IntVar()
-d10=IntVar()
-d11=IntVar()
-d12=IntVar()
-d13=IntVar()
+d1=bool()
+d2=bool()
+d3=bool()
+d4=bool()
+d5=bool()
+d6=bool()
+d7=bool()
+d8=bool()
+d9=bool()
+d10=bool()
+d11=bool()
+d12=bool()
+d13=bool()
 
+check1 = IntVar()
+
+#define onclick function for checkbox
 def click1():
-    d1=1
+    global d1
+    global check1
 
+    if check1.get() :
+        d1 = 1
+    else:
+        d1 = 0
+    
 #establishing the Window class and giving it an exit button
 class Window(Frame):
 
@@ -42,10 +51,10 @@ class Window(Frame):
 
         #device list, toggle status stored in corresponding d intvar
         c1=Checkbutton(root, text="Home virtual assistant (e.g. Alexa, Nest)",
-                       command=click1)
+                       variable=check1, onvalue=1, offvalue=0, command=click1)
         c1.pack()
 
-        c2=Checkbutton(root, text="Bitdefender BOX", variable=d2)
+        c2=Checkbutton(root, text="Bitdefender BOX", variable=d2,)
         c2.pack()
 
         c3=Checkbutton(root, text="Smart security cam (e.g. Nest Cam)",
@@ -101,17 +110,15 @@ class Window(Frame):
     #Define what clicking the next button does
     #NEED TO FIX 
     def clickNextButton(self):
-        if self.d1.get() == 0:
+        if d1 == 0:
             top = Toplevel(root)
             top.geometry("600x80")
             top.title("Uh oh!")
             Label(top, text="Select your devices first!",
                   font=('Geneva 20')).place(x=150, y=10)
         else:
-            for widgets in frame.winfo_children():
-                widgets.destroy()
+            print("pog?")
 
-        
 #establishing the root window
 app = Window(root)
 
