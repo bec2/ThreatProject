@@ -245,7 +245,7 @@ class Window(Frame):
             Label(top, text="Select your devices first!",
                   font=('Geneva 20')).place(x=150, y=10)
         else:
-            print("pog?")
+            pass
 
 #establishing the root window
 app = Window(root)
