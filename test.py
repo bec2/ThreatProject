@@ -3,8 +3,44 @@ from tkinter import *
 #need to declare this to display things later
 root=Tk()
 
-#establishing the Window class and giving it an exit button
+#establishing the variables for added devices
+d1=IntVar(0)
+d2=IntVar(0)
+d3=IntVar(0)
+d4=IntVar(0)
+d5=IntVar(0)
+d6=IntVar(0)
+d7=IntVar(0)
+d8=IntVar(0)
+d9=IntVar(0)
+d10=IntVar(0)
+d11=IntVar(0)
+d12=IntVar(0)
+d13=IntVar(0)
+
+#what happens when you register a device
+def click1():
+    d1 = IntVar(1)
+
+#establishing the Window class
 class Window(Frame):
+    
+    #Define what clicking the exit button does
+    def clickExitButton(self):
+        exit()
+
+    #Define what clicking the next button does
+    def clickNextButton(self):
+        if d1 != 1:
+            top = Toplevel(root)
+            top.geometry("600x80")
+            top.title("Uh oh!")
+            Label(top, text="Select your devices first!",
+                  font=('Geneva 20')).place(x=150, y=10)
+        else:
+            pass
+
+    #putting stuff in the window   
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.master=master
@@ -20,60 +56,47 @@ class Window(Frame):
         text2.place(x=70,y=130)
 
         #device list, toggle status stored in corresponding d intvar
-        d1=IntVar()
         c1=Checkbutton(root, text="Home virtual assistant (e.g. Alexa, Nest)",
-                       variable=d1)
+                       command=click1)
         c1.pack()
 
-        d2=IntVar()
         c2=Checkbutton(root, text="Bitdefender BOX", variable=d2)
         c2.pack()
 
-        d3=IntVar()
         c3=Checkbutton(root, text="Smart security cam (e.g. Nest Cam)",
                        variable=d3)
         c3.pack()
 
-        d4=IntVar()
         c4=Checkbutton(root, text="Smart doorbell", variable=d4)
         c4.pack()
 
-        d5=IntVar()
         c5=Checkbutton(root, text="Smart lighting (e.g. Hue)", variable=d5)
         c5.pack()
 
-        d6=IntVar()
         c6=Checkbutton(root, text="Smart fitness aid (e.g. SmartMat)",
                        variable=d6)
         c6.pack()
 
-        d7=IntVar()
         c7=Checkbutton(root, text="Smart kitchenwear", variable=d7)
         c7.pack()
 
-        d8=IntVar()
         c8=Checkbutton(root, text="Smart home security locks", variable=d8)
         c8.pack()
 
-        d9=IntVar()
         c9=Checkbutton(root, text="Amazon Dash button", variable=d9)
         c9.pack()
 
-        d10=IntVar()
         c10=Checkbutton(root, text="Smart thermostat / air monitor",
                         variable=d10)
         c10.pack()
 
-        d11=IntVar()
         c11=Checkbutton(root, text="Automated 'smart home' controller",
                         variable=d11)
         c11.pack()
 
-        d12=IntVar()
         c12=Checkbutton(root, text="Smart sleep tracker", variable=d12)
         c12.pack()
 
-        d13=IntVar()
         c13=Checkbutton(root, text="Any other smart home devices",
                         variable=d13)
         c13.pack()
@@ -84,15 +107,9 @@ class Window(Frame):
 
         #Next button
         nextButton = Button(self, text="Next", command=self.clickNextButton)
-        nextButton.place(x=750, y=160)
+        nextButton.place(x=750, y=160)                
 
-    #Define what clicking the exit button does
-    def clickExitButton(self):
-        exit()
 
-    #Define what clicking the next button does
-    def clickNextButton(self):
-        pass
         
 #establishing the root window
 app = Window(root)
