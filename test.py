@@ -18,9 +18,22 @@ d11=bool()
 d12=bool()
 d13=bool()
 
+#Declaring a way to hold the status of a checkbox
 check1 = IntVar()
+check2 = IntVar()
+check3 = IntVar()
+check4 = IntVar()
+check5 = IntVar()
+check6 = IntVar()
+check7 = IntVar()
+check8 = IntVar()
+check9 = IntVar()
+check10 = IntVar()
+check11 = IntVar()
+check12 = IntVar()
+check13 = IntVar()
 
-#define onclick function for checkbox
+#define onclick functions for checkboxes
 def click1():
     global d1
     global check1
@@ -29,7 +42,115 @@ def click1():
         d1 = 1
     else:
         d1 = 0
-    
+
+def click2():
+    global d2
+    global check2
+
+    if check2.get() :
+        d2 = 1
+    else:
+        d2 = 0
+
+def click3():
+    global d3
+    global check3
+
+    if check3.get() :
+        d3 = 1
+    else:
+        d3 = 0
+
+def click4():
+    global d4
+    global check4
+
+    if check4.get() :
+        d4 = 1
+    else:
+        d4 = 0
+
+def click5():
+    global d5
+    global check5
+
+    if check5.get() :
+        d5 = 1
+    else:
+        d5 = 0
+
+def click6():
+    global d6
+    global check6
+
+    if check6.get() :
+        d6 = 1
+    else:
+        d6 = 0
+
+def click7():
+    global d7
+    global check7
+
+    if check7.get() :
+        d7 = 1
+    else:
+        d7 = 0
+
+def click8():
+    global d8
+    global check8
+
+    if check8.get() :
+        d8 = 1
+    else:
+        d8 = 0
+
+def click9():
+    global d9
+    global check9
+
+    if check9.get() :
+        d9 = 1
+    else:
+        d9 = 0
+
+def click10():
+    global d10
+    global check10
+
+    if check10.get() :
+        d10 = 1
+    else:
+        d10 = 0
+
+def click11():
+    global d11
+    global check11
+
+    if check11.get() :
+        d11 = 1
+    else:
+        d11 = 0
+
+def click12():
+    global d12
+    global check12
+
+    if check12.get() :
+        d12 = 1
+    else:
+        d12 = 0
+
+def click13():
+    global d13
+    global check13
+
+    if check13.get() :
+        d13 = 1
+    else:
+        d13 = 0
+
 #establishing the Window class and giving it an exit button
 class Window(Frame):
 
@@ -54,45 +175,52 @@ class Window(Frame):
                        variable=check1, onvalue=1, offvalue=0, command=click1)
         c1.pack()
 
-        c2=Checkbutton(root, text="Bitdefender BOX", variable=d2,)
+        c2=Checkbutton(root, text="Bitdefender BOX", variable=check2, onvalue=1,
+                       offvalue=0, command=click2)
         c2.pack()
 
         c3=Checkbutton(root, text="Smart security cam (e.g. Nest Cam)",
-                       variable=d3)
+                       variable=check3, onvalue=1, offvalue=0, command=click3)
         c3.pack()
 
-        c4=Checkbutton(root, text="Smart doorbell", variable=d4)
+        c4=Checkbutton(root, text="Smart doorbell", variable=check4, onvalue=1,
+                       offvalue=0, command=click4)
         c4.pack()
 
-        c5=Checkbutton(root, text="Smart lighting (e.g. Hue)", variable=d5)
+        c5=Checkbutton(root, text="Smart lighting (e.g. Hue)", variable=check5,
+                       onvalue=1, offvalue=0, command=click5)
         c5.pack()
 
         c6=Checkbutton(root, text="Smart fitness aid (e.g. SmartMat)",
-                       variable=d6)
+                       variable=check6, onvalue=1, offvalue=0, command=click6)
         c6.pack()
 
-        c7=Checkbutton(root, text="Smart kitchenwear", variable=d7)
+        c7=Checkbutton(root, text="Smart kitchenwear", variable=check7,
+                       onvalue=1, offvalue=0, command=click7)
         c7.pack()
 
-        c8=Checkbutton(root, text="Smart home security locks", variable=d8)
+        c8=Checkbutton(root, text="Smart home security locks", variable=check8,
+                       onvalue=1, offvalue=0, command=click8)
         c8.pack()
 
-        c9=Checkbutton(root, text="Amazon Dash button", variable=d9)
+        c9=Checkbutton(root, text="Amazon Dash button", variable=check9,
+                       onvalue=1, offvalue=0, command=click9)
         c9.pack()
 
         c10=Checkbutton(root, text="Smart thermostat / air monitor",
-                        variable=d10)
+                        variable=check10, onvalue=1, offvalue=0, command=click10)
         c10.pack()
 
         c11=Checkbutton(root, text="Automated 'smart home' controller",
-                        variable=d11)
+                        variable=check11, onvalue=1, offvalue=0, command=click11)
         c11.pack()
 
-        c12=Checkbutton(root, text="Smart sleep tracker", variable=d12)
+        c12=Checkbutton(root, text="Smart sleep tracker", variable=check12,
+                        onvalue=1, offvalue=0, command=click12)
         c12.pack()
 
         c13=Checkbutton(root, text="Any other smart home devices",
-                        variable=d13)
+                        variable=check13, onvalue=1, offvalue=0, command=click13)
         c13.pack()
 
         #Exit button
@@ -110,7 +238,7 @@ class Window(Frame):
     #Define what clicking the next button does
     #NEED TO FIX 
     def clickNextButton(self):
-        if d1 == 0:
+        if d1 == 0 and d2 == 0 and d3 == 0 and d4 == 0 and d5 == 0 and d6 == 0 and d7 == 0 and d8 == 0 and d9 == 0 and d10 == 0 and d11 == 0 and d12 == 0 and d13 == 0:
             top = Toplevel(root)
             top.geometry("600x80")
             top.title("Uh oh!")
