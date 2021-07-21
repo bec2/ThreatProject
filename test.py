@@ -4,43 +4,27 @@ from tkinter import *
 root=Tk()
 
 #establishing the variables for added devices
-d1=IntVar(0)
-d2=IntVar(0)
-d3=IntVar(0)
-d4=IntVar(0)
-d5=IntVar(0)
-d6=IntVar(0)
-d7=IntVar(0)
-d8=IntVar(0)
-d9=IntVar(0)
-d10=IntVar(0)
-d11=IntVar(0)
-d12=IntVar(0)
-d13=IntVar(0)
+d1=IntVar()
+d2=IntVar()
+d3=IntVar()
+d4=IntVar()
+d5=IntVar()
+d6=IntVar()
+d7=IntVar()
+d8=IntVar()
+d9=IntVar()
+d10=IntVar()
+d11=IntVar()
+d12=IntVar()
+d13=IntVar()
 
 #what happens when you register a device
+#NEED TO FIX
 def click1():
-    d1 = IntVar(1)
+    d1 = d1(value=1)
 
-#establishing the Window class
+#establishing the Window class and giving it an exit button
 class Window(Frame):
-    
-    #Define what clicking the exit button does
-    def clickExitButton(self):
-        exit()
-
-    #Define what clicking the next button does
-    def clickNextButton(self):
-        if d1 != 1:
-            top = Toplevel(root)
-            top.geometry("600x80")
-            top.title("Uh oh!")
-            Label(top, text="Select your devices first!",
-                  font=('Geneva 20')).place(x=150, y=10)
-        else:
-            pass
-
-    #putting stuff in the window   
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.master=master
@@ -48,12 +32,12 @@ class Window(Frame):
 
         #adding title and body
         text1 = Label(self, text="Welcome!", bg="#996Db6", font=("Geneva", 25))
-        text1.place(x=70,y=90)
+        text1.place(x=70,y=10)
 
         text2 = Label(self,
                       text="Welcome to My Threat Model. Please select your devices to get started.",
                       bg="#996Db6", font=("Geneva",15))
-        text2.place(x=70,y=130)
+        text2.place(x=70,y=85)
 
         #device list, toggle status stored in corresponding d intvar
         c1=Checkbutton(root, text="Home virtual assistant (e.g. Alexa, Nest)",
@@ -103,12 +87,27 @@ class Window(Frame):
 
         #Exit button
         exitButton = Button(self, text="Quit", command=self.clickExitButton)
-        exitButton.place(x=900, y=160)
+        exitButton.place(x=70, y=160)
 
         #Next button
         nextButton = Button(self, text="Next", command=self.clickNextButton)
         nextButton.place(x=750, y=160)                
 
+    #Define what clicking the exit button does
+    def clickExitButton(self):
+        exit()
+
+    #Define what clicking the next button does
+    #NEED TO FIX 
+    def clickNextButton(self):
+        if d1 != 1:
+            top = Toplevel(root)
+            top.geometry("600x80")
+            top.title("Uh oh!")
+            Label(top, text="Select your devices first!",
+                  font=('Geneva 20')).place(x=150, y=10)
+        else:
+            pass
 
         
 #establishing the root window
@@ -116,7 +115,7 @@ app = Window(root)
 
 #naming the window and setting a size
 root.wm_title("My Threat Model")
-root.geometry("1000x500")
+root.geometry("875x500")
 app['bg']='#996Db6'
 
 #run
