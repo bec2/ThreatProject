@@ -82,9 +82,17 @@ class Window(Frame):
         exitButton = Button(self, text="Quit", command=self.clickExitButton)
         exitButton.place(x=900, y=160)
 
+        #Next button
+        nextButton = Button(self, text="Next", command=self.clickNextButton)
+        nextButton.place(x=750, y=160)
+
     #Define what clicking the exit button does
     def clickExitButton(self):
         exit()
+
+    #Define what clicking the next button does
+    def clickNextButton(self):
+        pass
         
 #establishing the root window
 app = Window(root)
