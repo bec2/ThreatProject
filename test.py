@@ -3,7 +3,7 @@ from tkinter import *
 #need to declare this to display things later
 root=Tk()
 
-#establishing the variables for added devices
+#Establishing the variables for added devices
 d1=IntVar()
 d2=IntVar()
 d3=IntVar()
@@ -18,13 +18,14 @@ d11=IntVar()
 d12=IntVar()
 d13=IntVar()
 
-#what happens when you register a device
-#NEED TO FIX
 def click1():
-    d1 = d1(value=1)
+    d1=1
 
 #establishing the Window class and giving it an exit button
 class Window(Frame):
+
+    global d1
+    
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.master=master
@@ -35,7 +36,7 @@ class Window(Frame):
         text1.place(x=70,y=10)
 
         text2 = Label(self,
-                      text="Welcome to My Threat Model. Please select your devices to get started.",
+                      text="Please select your devices to get started.",
                       bg="#996Db6", font=("Geneva",15))
         text2.place(x=70,y=85)
 
@@ -100,14 +101,15 @@ class Window(Frame):
     #Define what clicking the next button does
     #NEED TO FIX 
     def clickNextButton(self):
-        if d1 != 1:
+        if self.d1.get() == 0:
             top = Toplevel(root)
             top.geometry("600x80")
             top.title("Uh oh!")
             Label(top, text="Select your devices first!",
                   font=('Geneva 20')).place(x=150, y=10)
         else:
-            pass
+            for widgets in frame.winfo_children():
+                widgets.destroy()
 
         
 #establishing the root window
