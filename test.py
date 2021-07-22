@@ -154,7 +154,6 @@ def click13():
 #establishing the Window class and giving it an exit button
 class Window(Frame):
 
-    global d1
     
     def __init__(self, master=None):
         Frame.__init__(self, master)
@@ -171,57 +170,57 @@ class Window(Frame):
         text2.place(x=70,y=85)
 
         #device list, toggle status stored in corresponding d intvar
-        c1=Checkbutton(root, text="Home virtual assistant (e.g. Alexa, Nest)",
+        self.c1=Checkbutton(root, text="Home virtual assistant (e.g. Alexa, Nest)",
                        variable=check1, onvalue=1, offvalue=0, command=click1)
-        c1.pack()
+        self.c1.pack()
 
-        c2=Checkbutton(root, text="Bitdefender BOX", variable=check2, onvalue=1,
+        self.c2=Checkbutton(root, text="Bitdefender BOX", variable=check2, onvalue=1,
                        offvalue=0, command=click2)
-        c2.pack()
+        self.c2.pack()
 
-        c3=Checkbutton(root, text="Smart security cam (e.g. Nest Cam)",
+        self.c3=Checkbutton(root, text="Smart security cam (e.g. Nest Cam)",
                        variable=check3, onvalue=1, offvalue=0, command=click3)
-        c3.pack()
+        self.c3.pack()
 
-        c4=Checkbutton(root, text="Smart doorbell", variable=check4, onvalue=1,
+        self.c4=Checkbutton(root, text="Smart doorbell", variable=check4, onvalue=1,
                        offvalue=0, command=click4)
-        c4.pack()
+        self.c4.pack()
 
-        c5=Checkbutton(root, text="Smart lighting (e.g. Hue)", variable=check5,
+        self.c5=Checkbutton(root, text="Smart lighting (e.g. Hue)", variable=check5,
                        onvalue=1, offvalue=0, command=click5)
-        c5.pack()
+        self.c5.pack()
 
-        c6=Checkbutton(root, text="Smart fitness aid (e.g. SmartMat)",
+        self.c6=Checkbutton(root, text="Smart fitness aid (e.g. SmartMat)",
                        variable=check6, onvalue=1, offvalue=0, command=click6)
-        c6.pack()
+        self.c6.pack()
 
-        c7=Checkbutton(root, text="Smart kitchenwear", variable=check7,
+        self.c7=Checkbutton(root, text="Smart kitchenwear", variable=check7,
                        onvalue=1, offvalue=0, command=click7)
-        c7.pack()
+        self.c7.pack()
 
-        c8=Checkbutton(root, text="Smart home security locks", variable=check8,
+        self.c8=Checkbutton(root, text="Smart home security locks", variable=check8,
                        onvalue=1, offvalue=0, command=click8)
-        c8.pack()
+        self.c8.pack()
 
-        c9=Checkbutton(root, text="Amazon Dash button", variable=check9,
+        self.c9=Checkbutton(root, text="Amazon Dash button", variable=check9,
                        onvalue=1, offvalue=0, command=click9)
-        c9.pack()
+        self.c9.pack()
 
-        c10=Checkbutton(root, text="Smart thermostat / air monitor",
+        self.c10=Checkbutton(root, text="Smart thermostat / air monitor",
                         variable=check10, onvalue=1, offvalue=0, command=click10)
-        c10.pack()
+        self.c10.pack()
 
-        c11=Checkbutton(root, text="Automated 'smart home' controller",
+        self.c11=Checkbutton(root, text="Automated 'smart home' controller",
                         variable=check11, onvalue=1, offvalue=0, command=click11)
-        c11.pack()
+        self.c11.pack()
 
-        c12=Checkbutton(root, text="Smart sleep tracker", variable=check12,
+        self.c12=Checkbutton(root, text="Smart sleep tracker", variable=check12,
                         onvalue=1, offvalue=0, command=click12)
-        c12.pack()
+        self.c12.pack()
 
-        c13=Checkbutton(root, text="Any other smart home devices",
+        self.c13=Checkbutton(root, text="Any other smart home devices",
                         variable=check13, onvalue=1, offvalue=0, command=click13)
-        c13.pack()
+        self.c13.pack()
 
         #Exit button
         exitButton = Button(self, text="Quit", command=self.clickExitButton)
@@ -229,14 +228,13 @@ class Window(Frame):
 
         #Next button
         nextButton = Button(self, text="Next", command=self.clickNextButton)
-        nextButton.place(x=750, y=160)                
+        nextButton.place(x=750, y=160)
 
     #Define what clicking the exit button does
     def clickExitButton(self):
         exit()
 
     #Define what clicking the next button does
-    #NEED TO FIX 
     def clickNextButton(self):
         if d1 == 0 and d2 == 0 and d3 == 0 and d4 == 0 and d5 == 0 and d6 == 0 and d7 == 0 and d8 == 0 and d9 == 0 and d10 == 0 and d11 == 0 and d12 == 0 and d13 == 0:
             top = Toplevel(root)
@@ -245,7 +243,25 @@ class Window(Frame):
             Label(top, text="Select your devices first!",
                   font=('Geneva 20')).place(x=150, y=10)
         else:
-            pass
+            self.pack_forget()
+            self.c1.forget()
+            self.c2.forget()
+            self.c3.forget()
+            self.c4.forget()
+            self.c5.forget()
+            self.c6.forget()
+            self.c7.forget()
+            self.c8.forget()
+            self.c9.forget()
+            self.c10.forget()
+            self.c11.forget()
+            self.c12.forget()
+            self.c13.forget()
+            page2()
+
+
+def page2():
+    print("build page 2")
 
 #establishing the root window
 app = Window(root)
