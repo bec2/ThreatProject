@@ -261,7 +261,22 @@ class Window(Frame):
 
 
 def page2():
+    
     print("build page 2")
+
+    class Window2(Frame):
+        def __init__(self, master=None):
+            Frame.__init__(self, master)
+            self.master=master
+            self.pack(fill=BOTH, expand=1)
+
+            text1=Label(self, text="hi", font=("Geneva 20"))
+            text1.place(x=70,y=10)
+
+    app = Window2(root)
+    root.wm_title("My Threat Model")
+    root.geometry("875x500")
+
 
 #establishing the root window
 app = Window(root)
