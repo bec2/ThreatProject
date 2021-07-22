@@ -261,8 +261,8 @@ class Window(Frame):
 
 
 def page2():
-    
-    print("build page 2")
+
+    print(d1)
 
     class Window2(Frame):
         def __init__(self, master=None):
@@ -270,12 +270,14 @@ def page2():
             self.master=master
             self.pack(fill=BOTH, expand=1)
 
-            text1=Label(self, text="hi", font=("Geneva 20"))
+            text1=Label(self, text="Just a few more questions...",
+                        font=("Geneva 20"), bg='#996Db6')
             text1.place(x=70,y=10)
 
     app = Window2(root)
     root.wm_title("My Threat Model")
     root.geometry("875x500")
+    app['bg']='#996Db6'
 
 
 #establishing the root window
