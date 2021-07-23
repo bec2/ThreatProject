@@ -259,20 +259,81 @@ class Window(Frame):
             self.c13.forget()
             page2()
 
-
+#Setting out what page 2 is
 def page2():
-
-    print(d1)
 
     class Window2(Frame):
         def __init__(self, master=None):
             Frame.__init__(self, master)
             self.master=master
             self.pack(fill=BOTH, expand=1)
-
+            
             text1=Label(self, text="Just a few more questions...",
                         font=("Geneva 20"), bg='#996Db6')
             text1.place(x=70,y=10)
+
+            text2=Label(self, text="Tick the boxes if the following apply to you.",
+                        font=("Geneva 15"), bg='#996Db6')
+            text2.place(x=70, y=50)
+
+            #new checkboxes for mitigating factors
+
+            self.c1=Checkbutton(root,
+                                text="I connect my home devices to Wi-Fi networks that aren't my own.")
+            self.c1.pack()
+
+            self.c2=Checkbutton(root,
+                                text="My online accounts aren't all protected with 2FA where possible.")
+            self.c2.pack()
+
+            self.c3=Checkbutton(root,
+                                text="My Wi-Fi password is still the default one the router box came with.")
+            self.c3.pack()
+
+            self.c4=Checkbutton(root,
+                                text="Not all of my passwords have combined capitals and lowercases, numbers, and symbols.")
+            self.c4.pack()
+
+            self.c5=Checkbutton(root,
+                                text="My voice controlled devices are sometimes in places with thin walls / windows that let sound through.")
+            self.c5.pack()
+
+            self.c6=Checkbutton(root,
+                                text="I have not opted out of company processing of my voice commands.")
+            self.c6.pack()
+
+            self.c7=Checkbutton(root,
+                                text="I leave my voice activated devices on when I am not using them, or having other conversations.")
+            self.c7.pack()
+
+            self.c8=Checkbutton(root,
+                                text="I don't have all my devices updates to the most recent patch.")
+            self.c8.pack()
+
+            self.c9=Checkbutton(root,
+                                text="I have installed apps or skills from sources I don't recognise or trust.")
+            self.c9.pack()
+
+            self.c10=Checkbutton(root,
+                                 text="I have home devices from sources I don't recognise or trust.")
+            self.c10.pack()
+
+            self.c11=Checkbutton(root,
+                                 text="I have a virtual assistant hub registered to my account that other people in my home interact with.")
+            self.c11.pack()
+
+            self.c12=Checkbutton(root,
+                                 text="My devices aren't set up to generate some arbitrary digital traffic when I'm not home.")
+            self.c12.pack()
+
+            self.c13=Checkbutton(root,
+                                 text="I haven't opted out of third party data processing or collection where possible in my devices.")
+            self.c13.pack()
+
+            self.c14=Checkbutton(root,
+                                 text="I didn't fully read the terms of service or processing rules for at least one of my devices.")
+            self.c14.pack()
+            
 
     app = Window2(root)
     root.wm_title("My Threat Model")
