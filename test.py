@@ -18,7 +18,23 @@ d11=bool()
 d12=bool()
 d13=bool()
 
-#Declaring a way to hold the status of a checkbox
+#Establishing the variables for risk factors
+r1=bool()
+r2=bool()
+r3=bool()
+r4=bool()
+r5=bool()
+r6=bool()
+r7=bool()
+r8=bool()
+r9=bool()
+r10=bool()
+r11=bool()
+r12=bool()
+r13=bool()
+r14=bool()
+
+#Making a way to hold the status of a checkbox
 check1 = IntVar()
 check2 = IntVar()
 check3 = IntVar()
@@ -32,6 +48,21 @@ check10 = IntVar()
 check11 = IntVar()
 check12 = IntVar()
 check13 = IntVar()
+
+checkB1 = IntVar()
+checkB2 = IntVar()
+checkB3 = IntVar()
+checkB4 = IntVar()
+checkB5 = IntVar()
+checkB6 = IntVar()
+checkB7 = IntVar()
+checkB8 = IntVar()
+checkB9 = IntVar()
+checkB10 = IntVar()
+checkB11 = IntVar()
+checkB12 = IntVar()
+checkB13 = IntVar()
+checkB14 = IntVar()
 
 #define onclick functions for checkboxes
 def click1():
@@ -319,7 +350,7 @@ def page2():
             self.c10.pack()
 
             self.c11=Checkbutton(root,
-                                 text="I have a virtual assistant hub registered to my account that other people in my home interact with.")
+                                 text="People other than the registered account holder(s) interface with the devices.")
             self.c11.pack()
 
             self.c12=Checkbutton(root,
