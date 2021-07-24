@@ -411,72 +411,86 @@ def page2():
 
             self.c1=Checkbutton(root,
                                 text="I connect my home devices to Wi-Fi networks that aren't my own.",
-                                variable=checkB1, onvalue=1, offvalue=0)
+                                variable=checkB1, onvalue=1, offvalue=0,
+                                command=clickB1)
             self.c1.pack()
 
             self.c2=Checkbutton(root,
                                 text="My online accounts aren't all protected with 2FA where possible.",
-                                variable=checkB2, onvalue=1, offvalue=0)
+                                variable=checkB2, onvalue=1, offvalue=0,
+                                command=clickB2)
             self.c2.pack()
 
             self.c3=Checkbutton(root,
                                 text="My Wi-Fi password is still the default one the router box came with.",
-                                variable=checkB3, onvalue=1, offvalue=0)
+                                variable=checkB3, onvalue=1, offvalue=0,
+                                command=clickB3)
             self.c3.pack()
 
             self.c4=Checkbutton(root,
                                 text="Not all of my passwords have combined capitals and lowercases, numbers, and symbols.",
-                                variable=checkB4, onvalue=1, offvalue=0)
+                                variable=checkB4, onvalue=1, offvalue=0,
+                                command=clickB4)
             self.c4.pack()
 
             self.c5=Checkbutton(root,
                                 text="My voice controlled devices are sometimes in places with thin walls / windows that let sound through.",
-                                variable=checkB5, onvalue=1, offvalue=0)
+                                variable=checkB5, onvalue=1, offvalue=0,
+                                command=clickB5)
             self.c5.pack()
 
             self.c6=Checkbutton(root,
                                 text="I have not opted out of company processing of my voice commands.",
-                                variable=checkB6, onvalue=1, offvalue=0)
+                                variable=checkB6, onvalue=1, offvalue=0,
+                                command=clickB6)
             self.c6.pack()
 
             self.c7=Checkbutton(root,
                                 text="I leave my voice activated devices on when I am not using them, or having other conversations.",
-                                variable=checkB7, onvalue=1, offvalue=0)
+                                variable=checkB7, onvalue=1, offvalue=0,
+                                command=clickB7)
             self.c7.pack()
 
             self.c8=Checkbutton(root,
                                 text="I don't have all my devices updates to the most recent patch.",
-                                variable=checkB8, onvalue=1, offvalue=0)
+                                variable=checkB8, onvalue=1, offvalue=0,
+                                command=clickB8)
             self.c8.pack()
 
             self.c9=Checkbutton(root,
                                 text="I have installed apps or skills from sources I don't recognise or trust.",
-                                variable=checkB9, onvalue=1, offvalue=0)
+                                variable=checkB9, onvalue=1, offvalue=0,
+                                command=clickB9)
             self.c9.pack()
 
             self.c10=Checkbutton(root,
                                  text="I have home devices from sources I don't recognise or trust.",
-                                 variable=checkB10, onvalue=1, offvalue=0)
+                                 variable=checkB10, onvalue=1, offvalue=0,
+                                 command=clickB10)
             self.c10.pack()
 
             self.c11=Checkbutton(root,
                                  text="People other than the registered account holder(s) interface with the devices.",
-                                 variable=checkB11, onvalue=1, offvalue=0)
+                                 variable=checkB11, onvalue=1, offvalue=0,
+                                 command=clickB11)
             self.c11.pack()
 
             self.c12=Checkbutton(root,
                                  text="My devices aren't set up to generate some arbitrary digital traffic when I'm not home.",
-                                 variable=checkB12, onvalue=1, offvalue=0)
+                                 variable=checkB12, onvalue=1, offvalue=0,
+                                 command=clickB12)
             self.c12.pack()
 
             self.c13=Checkbutton(root,
                                  text="I haven't opted out of third party data processing or collection where possible in my devices.",
-                                 variable=checkB13, onvalue=1, offvalue=0)
+                                 variable=checkB13, onvalue=1, offvalue=0,
+                                 command=clickB13)
             self.c13.pack()
 
             self.c14=Checkbutton(root,
                                  text="I didn't fully read the terms of service or processing rules for at least one of my devices.",
-                                 variable=checkB14, onvalue=1, offvalue=0)
+                                 variable=checkB14, onvalue=1, offvalue=0,
+                                 command=clickB14)
             self.c14.pack()
             
 
