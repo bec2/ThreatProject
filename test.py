@@ -394,6 +394,13 @@ class Window(Frame):
 def page2():
 
     class Window2(Frame):
+
+        def clickExitBtn2(self):
+            exit()
+
+        def clickNextBtn2(self):
+            pass
+        
         def __init__(self, master=None):
             Frame.__init__(self, master)
             self.master=master
@@ -407,7 +414,7 @@ def page2():
                         font=("Geneva 15"), bg='#996Db6')
             text2.place(x=70, y=50)
 
-            #new checkboxes for mitigating factors
+            #new checkboxes for risk factors
 
             self.c1=Checkbutton(root,
                                 text="I connect my home devices to Wi-Fi networks that aren't my own.",
@@ -493,6 +500,15 @@ def page2():
                                  command=clickB14)
             self.c14.pack()
             
+
+            #buttons        
+            exitButton2 = Button(self, text="Quit", command=self.clickExitBtn2)
+            exitButton2.place(x=70, y=140)
+
+            nextButton2 = Button(self, text="Next", command=self.clickNextBtn2)
+            nextButton2.place(x=750, y=140)
+
+        
 
     app = Window2(root)
     root.wm_title("My Threat Model")
