@@ -4,35 +4,35 @@ from tkinter import *
 root=Tk()
 
 #Establishing the variables for added devices
-d1=bool()
-d2=bool()
-d3=bool()
-d4=bool()
-d5=bool()
-d6=bool()
-d7=bool()
-d8=bool()
-d9=bool()
-d10=bool()
-d11=bool()
-d12=bool()
-d13=bool()
+d1=bool() #Home virtual assistant
+d2=bool() #Bitdefender BOX
+d3=bool() #Smart security cam
+d4=bool() #Smart doorbell
+d5=bool() #Smart lighting
+d6=bool() #Smart fitness aid
+d7=bool() #Smart kitchenwear
+d8=bool() #Smart home security locks
+d9=bool() #Amazon Dash
+d10=bool()#Smart thermostat or air monitor
+d11=bool()#Automated smart home controller
+d12=bool()#Sleep tracker
+d13=bool()#Any other
 
 #Establishing the variables for risk factors
-r1=bool()
-r2=bool()
-r3=bool()
-r4=bool()
-r5=bool()
-r6=bool()
-r7=bool()
-r8=bool()
-r9=bool()
-r10=bool()
-r11=bool()
-r12=bool()
-r13=bool()
-r14=bool()
+r1=bool() #other wifi networks used
+r2=bool() #lacking 2fa
+r3=bool() #default router passwd
+r4=bool() #weak passwd
+r5=bool() #sound can travel
+r6=bool() #opted in to voice processing
+r7=bool() #leave mic on
+r8=bool() #unpatched
+r9=bool() #unrecognised apps
+r10=bool()#unrecognised devices
+r11=bool()#other users
+r12=bool()#no arbitrary traffic
+r13=bool()#opted in to 3rd party processing
+r14=bool()#didn't read tos
 
 #Making a way to hold the status of a checkbox
 check1 = IntVar()
@@ -71,15 +71,24 @@ catIntern = bool()  #devices connecting to the internal network
 catExtern = bool()  #devices communicating over the internet
 catSecure = bool()  #devices affecting physical home security
 
-#Threats related to catVoice
-
-#Threats related to catSign
-
-#Threats related to catIntern
-
-#Threats related to catExtern
-
-#Threats related to catSecure
+#Threat base scores - taken from avg of the associated cvss values to 1dp
+#The numbers relate to the matching threat from STRIDE - see paper
+stride1 = float(3.8)
+stride2 = float()
+stride3 = float()
+stride4 = float()
+stride5 = float()
+stride6 = float()
+stride7 = float()
+stride8 = float()
+stride9 = float()
+stride10 = float()
+stride11 = float()
+stride12 = float()
+stride13 = float()
+stride14 = float()
+stride15 = float()
+stride16 = float()
 
 #Privacy concerns, each +1
 
@@ -412,7 +421,7 @@ class Window(Frame):
         else:
             self.pack_forget()
             self.c1.forget()
-            self.c2.forget()
+            #self.c2.forget()
             self.c3.forget()
             self.c4.forget()
             self.c5.forget()
