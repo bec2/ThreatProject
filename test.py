@@ -312,9 +312,9 @@ class Window(Frame):
                        variable=check1, onvalue=1, offvalue=0, command=click1)
         self.c1.pack()
 
-        self.c2=Checkbutton(root, text="Bitdefender BOX", variable=check2, onvalue=1,
-                       offvalue=0, command=click2)
-        self.c2.pack()
+        #self.c2=Checkbutton(root, text="Bitdefender BOX", variable=check2, onvalue=1,
+                       #offvalue=0, command=click2)
+        #self.c2.pack()
 
         self.c3=Checkbutton(root, text="Smart security cam (e.g. Nest Cam)",
                        variable=check3, onvalue=1, offvalue=0, command=click3)
