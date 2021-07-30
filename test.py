@@ -445,7 +445,22 @@ def page2():
             exit()
 
         def clickNextBtn2(self):
-            pass
+            self.pack_forget()
+            self.c1.forget()
+            self.c2.forget()
+            self.c3.forget()
+            self.c4.forget()
+            self.c5.forget()
+            self.c6.forget()
+            self.c7.forget()
+            self.c8.forget()
+            self.c9.forget()
+            self.c10.forget()
+            self.c11.forget()
+            self.c12.forget()
+            self.c13.forget()
+            self.c14.forget()
+            print('load page 3')
         
         def __init__(self, master=None):
             Frame.__init__(self, master)
