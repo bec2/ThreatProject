@@ -83,7 +83,22 @@ catSecure = bool()  #devices affecting physical home security
 
 #Privacy concerns, each +1
 
-#Risk factors numerical values
+#Risk factors numerical values, 1=small/unexpected, 2=med, 3=large
+riskNum1 = int(3)
+riskNum2 = int(1)
+riskNum3 = int(2)
+riskNum4 = int(2)
+riskNum5 = int(1)
+riskNum6 = int(1)
+riskNum7 = int(3)
+riskNum8 = int(3)
+riskNum9 = int(3)
+riskNum10 = int(3)
+riskNum11 = int(3)
+riskNum12 = int(2)
+riskNum13 = int(1)
+riskNum14 = int(1)
+
 
 #define onclick functions for checkboxes
 def click1():
