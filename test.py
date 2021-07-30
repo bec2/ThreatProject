@@ -64,6 +64,13 @@ checkB12 = IntVar()
 checkB13 = IntVar()
 checkB14 = IntVar()
 
+#Sort categories for the modelling algorithm
+catVoice = bool()   #voice input devices
+catSign = bool()    #devices requiring sign in to function
+catIntern = bool()  #devices connecting to the internal network
+catExtern = bool()  #devices communicating over the internet
+catSecure = bool()  #devices affecting physical home security
+
 #define onclick functions for checkboxes
 def click1():
     global d1
