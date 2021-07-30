@@ -74,23 +74,24 @@ catSecure = bool()  #devices affecting physical home security
 #Threat base scores - taken from avg of the associated cvss values to 1dp
 #The numbers relate to the matching threat from STRIDE - see paper
 stride1 = float(3.8)
-stride2 = float()
-stride3 = float()
-stride4 = float()
-stride5 = float()
-stride6 = float()
-stride7 = float()
-stride8 = float()
-stride9 = float()
-stride10 = float()
-stride11 = float()
-stride12 = float()
-stride13 = float()
-stride14 = float()
-stride15 = float()
-stride16 = float()
+stride2 = float(5.8)
+stride3 = float(6.6)
+stride4 = float(6.1)
+stride5 = float(3.9)
+stride6 = float(5.6)
+stride7 = float(6.4)
+stride8 = float(4.8)
+stride9 = float(3.0)
+stride10 = float(4.9)
+stride11 = float(5.5)
+stride12 = float(4.6)
+stride13 = float(4.3)
+stride14 = float(4.2)
+stride15 = float(7.1)
+stride16 = float(7.1)
 
-#Privacy concerns, each +1
+#Value for any privacy concerns, each +1, can be added multiple times
+lindunn = int(1)
 
 #Risk factors numerical values, 1=small/unexpected, 2=med, 3=large
 riskNum1 = int(3)
