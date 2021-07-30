@@ -71,6 +71,20 @@ catIntern = bool()  #devices connecting to the internal network
 catExtern = bool()  #devices communicating over the internet
 catSecure = bool()  #devices affecting physical home security
 
+#Threats related to catVoice
+
+#Threats related to catSign
+
+#Threats related to catIntern
+
+#Threats related to catExtern
+
+#Threats related to catSecure
+
+#Privacy concerns, each +1
+
+#Risk factors numerical values
+
 #define onclick functions for checkboxes
 def click1():
     global d1
