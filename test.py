@@ -66,7 +66,7 @@ checkB14 = IntVar()
 
 #Sort categories for the modelling algorithm
 catVoice = bool()   #voice input devices
-catSign = bool()    #devices requiring sign in to function
+catSign = bool()    #device types generally requiring sign in to function
 catIntern = bool()  #devices connecting to the internal network
 catExtern = bool()  #devices communicating over the internet
 catSecure = bool()  #devices affecting physical home security
@@ -89,9 +89,6 @@ stride13 = float(4.3)
 stride14 = float(4.2)
 stride15 = float(7.1)
 stride16 = float(7.1)
-
-#Value for any privacy concerns, each +1, can be added multiple times
-lindunn = int(1)
 
 #Risk factors numerical values, 1=small/unexpected, 2=med, 3=large
 riskNum1 = int(3)
@@ -625,6 +622,15 @@ def calculator():
         catSecure = 1
     else:
         pass
+
+    #Get base scores for sub categories - declare them way up top!
+
+    #Delete sub categories depending on what risks are turned off
+    #might need to declare these up top
+
+    #Add risk scores to sub cats depending on which risks are turned on
+
+    #add lindunn scores
 
 #establishing the root window
 app = Window(root)
