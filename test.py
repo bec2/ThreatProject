@@ -90,6 +90,25 @@ stride14 = float(4.2)
 stride15 = float(7.1)
 stride16 = float(7.1)
 
+#Way to check if a stride variable is turned on or not
+strideOn1 = bool()
+strideOn2 = bool()
+strideOn3 = bool()
+strideOn4 = bool()
+strideOn5 = bool()
+strideOn6 = bool()
+strideOn7 = bool()
+strideOn8 = bool()
+strideOn9 = bool()
+strideOn10 = bool()
+strideOn11 = bool()
+strideOn12 = bool()
+strideOn13 = bool()
+strideOn14 = bool()
+strideOn15 = bool()
+strideOn16 = bool()
+
+
 #Risk factors numerical values, 1=small/unexpected, 2=med, 3=large
 riskNum1 = int(3)
 riskNum2 = int(1)
@@ -106,6 +125,23 @@ riskNum12 = int(2)
 riskNum13 = int(1)
 riskNum14 = int(1)
 
+#Initialise variables for holding up to 16 calculations for 16 stride categs
+calc1 = float()
+calc2 = float()
+calc3 = float()
+calc4 = float()
+calc5 = float()
+calc6 = float()
+calc7 = float()
+calc8 = float()
+calc9 = float()
+calc10 = float()
+calc11 = float()
+calc12 = float()
+calc13 = float()
+calc14 = float()
+calc15 = float()
+calc16 = float()
 
 #define onclick functions for checkboxes
 def click1():
@@ -623,12 +659,14 @@ def calculator():
     else:
         pass
 
-    #Get base scores for sub categories - declare them way up top!
-
+    #Turn on correct strideOn per subcategory 
+    
     #Delete sub categories depending on what risks are turned off
     #might need to declare these up top
 
-    #Add risk scores to sub cats depending on which risks are turned on
+    #Add remaining stride cvss scores into totals
+
+    #Add risk scores to totals depending on which risks are turned on
 
     #add lindunn scores
 
