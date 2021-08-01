@@ -659,6 +659,24 @@ def calculator():
     else:
         pass
 
+    #Recall the strideOn values before we use them 
+    global strideOn1
+    global strideOn2
+    global strideOn3
+    global strideOn4
+    global strideOn5
+    global strideOn6
+    global strideOn7
+    global strideOn8
+    global strideOn9
+    global strideOn10
+    global strideOn11
+    global strideOn12
+    global strideOn13
+    global strideOn14
+    global strideOn15
+    global strideOn16
+
     #Turn on correct strideOn values per subcategory
     if catVoice == 1:
         strideOn1 = 1
@@ -710,9 +728,106 @@ def calculator():
 
     
     #Delete sub categories depending on what risks are turned off
-    #might need to declare these up top
+    #mDepending on if there is time for extra features
+    #It would require all the avenues to be blocked for the threat to be deleted
 
-    #Add remaining stride cvss scores into totals
+    #Add stride cvss scores into totals if those stride values are on
+    #This could probably be made more elegant with arrays if there is time
+    if strideOn1 == 1:
+        global calc1
+        calc1 = stride1
+    else:
+        pass
+
+    if strideOn2 == 1:
+        global calc2
+        calc2 = stride2
+    else:
+        pass
+
+    if strideOn3 == 1:
+        global calc3
+        calc3 = stride3
+    else:
+        pass
+
+    if strideOn4 == 1:
+        global calc4
+        calc4 = stride4
+    else:
+        pass
+
+    if strideOn5 == 1:
+        global calc5
+        calc5 = stride5
+    else:
+        pass
+
+    if strideOn6 == 1:
+        global calc6
+        calc6 = stride6
+    else:
+        pass
+
+    if strideOn7 == 1:
+        global calc7
+        calc7 = stride7
+    else:
+        pass
+
+    if strideOn8 == 1:
+        global calc8
+        calc8 = stride8
+    else:
+        pass
+
+    if strideOn9 == 1:
+        global calc9
+        calc9 = stride9
+    else:
+        pass
+
+    if strideOn10 == 1:
+        global calc10
+        calc10 = stride10
+    else:
+        pass
+
+    if strideOn11 == 1:
+        global calc11
+        calc11 = stride11
+    else:
+        pass
+
+    if strideOn12 == 1:
+        global calc12
+        calc12 = stride12
+    else:
+        pass
+
+    if strideOn13 == 1:
+        global calc13
+        calc13 = stride13
+    else:
+        pass
+
+    if strideOn14 == 1:
+        global calc14
+        calc14 = stride14
+    else:
+        pass
+
+    if strideOn15 == 1:
+        global calc15
+        calc15 = stride15
+    else:
+        pass
+
+    if strideOn16 == 1:
+        global calc16
+        calc16 = stride16
+    else:
+        pass
 
     #Add risk scores to totals depending on which risks are turned on
 
