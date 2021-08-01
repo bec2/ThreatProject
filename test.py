@@ -659,7 +659,55 @@ def calculator():
     else:
         pass
 
-    #Turn on correct strideOn per subcategory 
+    #Turn on correct strideOn values per subcategory
+    if catVoice == 1:
+        strideOn1 = 1
+        strideOn4 = 1
+        strideOn7 = 1
+        strideOn10 = 1
+        strideOn11 = 1
+        strideOn12 = 1
+    else:
+        pass
+
+    if catSign == 1:
+        strideOn2 = 1
+        strideOn8 = 1
+    else:
+        pass
+
+    if catIntern == 1:
+        strideOn3 = 1
+        strideOn6 = 1
+        strideOn7 = 1
+        strideOn9 = 1
+        strideOn13 = 1
+        strideOn14 = 1
+        strideOn15 = 1
+        strideOn16 = 1
+    else:
+        pass
+
+    if catExtern == 1:
+        strideOn2 = 1
+        strideOn5 = 1
+        strideOn8 = 1
+        strideOn11 = 1
+        strideOn13 = 1
+        strideOn15 = 1
+    else:
+        pass
+
+    if catSecure == 1:
+        strideOn3 = 1
+        strideOn6 = 1
+        strideOn7 = 1
+        strideOn9 = 1
+        strideOn14 = 1
+        strideOn16 = 1
+    else:
+        pass
+
     
     #Delete sub categories depending on what risks are turned off
     #might need to declare these up top
