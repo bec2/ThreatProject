@@ -328,6 +328,7 @@ def clickB14():
     else:
         r14 = 0
 
+
 #establishing the Window class and giving it an exit button
 class Window(Frame):
 
@@ -435,6 +436,7 @@ class Window(Frame):
             self.c12.forget()
             self.c13.forget()
             page2()
+
 
 #Setting out what page 2 is
 def page2():
@@ -569,17 +571,17 @@ def page2():
             nextButton2 = Button(self, text="Next", command=self.clickNextBtn2)
             nextButton2.place(x=750, y=140)
 
-        
-
     app = Window2(root)
     root.wm_title("My Threat Model")
     root.geometry("875x500")
     app['bg']='#996Db6'
+    
 
+#A loading page displays text while the algorithm does its job
+#This acts as a space to run all the calculations in the background
 def calculator():
-    print("Starting calculator...")
 
-    class Window3(Frame):
+    class WindowC(Frame):
 
         def __init__(self, master=None):
             Frame.__init__(self, master)
@@ -588,13 +590,41 @@ def calculator():
 
             text1=Label(self, text="Calculating...", font=("Geneva 20"),
                         bg='#996Db6')
-            text1.place(x=70,y=10)
+            text1.place(x=70,y=50)
 
-    app = Window3(root)
+    app = WindowC(root)
     root.wm_title("My Threat Model")
     root.geometry("875x500")
     app['bg']='#996Db6'
 
+    #Depending on what devices were added, different categories get turned on
+    #catIntern should be active for any device choice
+    global catIntern
+    catIntern = 1
+    
+    if d1 == 1 or d11 == 1 or d12 == 1:
+        global catVoice
+        catVoice = 1
+    else:
+        pass
+
+    if d1 == 1 or d3 == 1 or d4 == 1 or d6 == 1 or d9 == 1 or d11 == 1 or d12 == 1 or d13 == 1:
+        global catSign
+        catSign = 1
+    else:
+        pass
+
+    if d1 == 1 or d3 == 1 or d6 == 1 or d8 == 1 or d9 == 1 or d10 == 1 or d11 == 1 or d13 == 1:
+        global catExtern
+        catExtern = 1
+    else:
+        pass
+
+    if d1 == 1 or d3 == 1 or d4 == 1 or d8 == 1 or d10 == 1 or d11 == 1 or d13 == 1:
+        global catSecure
+        catSecure = 1
+    else:
+        pass
 
 #establishing the root window
 app = Window(root)
