@@ -460,7 +460,7 @@ def page2():
             self.c12.forget()
             self.c13.forget()
             self.c14.forget()
-            print('load page 3')
+            calculator()
         
         def __init__(self, master=None):
             Frame.__init__(self, master)
@@ -576,6 +576,8 @@ def page2():
     root.geometry("875x500")
     app['bg']='#996Db6'
 
+def calculator():
+    print("working")
 
 #establishing the root window
 app = Window(root)
