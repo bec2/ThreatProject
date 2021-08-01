@@ -577,7 +577,24 @@ def page2():
     app['bg']='#996Db6'
 
 def calculator():
-    print("working")
+    print("Starting calculator...")
+
+    class Window3(Frame):
+
+        def __init__(self, master=None):
+            Frame.__init__(self, master)
+            self.master=master
+            self.pack(fill=BOTH, expand=1)
+
+            text1=Label(self, text="Calculating...", font=("Geneva 20"),
+                        bg='#996Db6')
+            text1.place(x=70,y=10)
+
+    app = Window3(root)
+    root.wm_title("My Threat Model")
+    root.geometry("875x500")
+    app['bg']='#996Db6'
+
 
 #establishing the root window
 app = Window(root)
