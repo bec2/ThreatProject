@@ -1234,7 +1234,7 @@ def calculator():
 #Displaying the results to the user
 def page3():
     print("yay")
-
+    
     
     
         
