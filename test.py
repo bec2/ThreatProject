@@ -1225,6 +1225,8 @@ def calculator():
         calc9 = calc9 + 2
         calc14 = calc14 + 2
         calc16 = calc16 + 2
+    else:
+        pass
         
 
 #establishing the root window
