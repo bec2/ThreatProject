@@ -1229,6 +1229,16 @@ def calculator():
     else:
         app.pack_forget()
 
+    #Put all our results in a list so we can sort them
+    calcList = [calc1, calc2, calc3, calc4, calc5, calc6, calc7, calc8, calc9,
+                calc10, calc11, calc12, calc13]
+    #Remove all null values
+    while 0 in calcList:
+        calcList.remove(0)   
+    #Arrange list in descending order so biggest threats are first
+    calcList.sort(reverse=True)
+    print(calcList)
+
     page3()
 
 #Displaying the results to the user
