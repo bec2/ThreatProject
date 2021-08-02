@@ -1178,6 +1178,54 @@ def calculator():
         pass
 
     #add lindunn scores
+    #this is being done separately to the cvss score for ease of anyone reading the code
+    #see docs for why these scores in particular are used
+    if catVoice == 1:
+        calc1 = calc1 + 5.5
+        cacl4 = calc4 + 5.5
+        calc7 = calc7 + 5.5
+        calc10 = calc10 + 5.5
+        cacl11 = calc11 + 5.5
+        calc12 = calc12 + 5.5
+    else:
+        pass
+
+    if catSign == 1:
+        calc2 = calc2 + 8.5
+        calc8 = calc8 + 8.5
+    else:
+        pass
+
+    if catIntern == 1:
+        calc3 = calc3 + 2
+        calc6 = calc6 + 2
+        calc7 = calc7 + 2
+        calc9 = calc9 + 2
+        calc13 = calc13 + 2
+        calc14 = calc14 + 2
+        calc15 = calc15 + 2
+        calc16 = calc16 + 2
+    else:
+        pass
+
+    if catExtern == 1:
+        calc2 = calc2 + 5
+        calc5 = calc5 + 5
+        calc8 = calc8 + 5
+        calc11 = calc11 + 5
+        calc13 = calc13 + 5
+        calc15 = calc15 + 5
+    else:
+        pass
+
+    if catSecure == 1:
+        calc3 = calc3 + 2
+        calc6 = calc6 + 2
+        calc7 = calc7 + 2
+        calc9 = calc9 + 2
+        calc14 = calc14 + 2
+        calc16 = calc16 + 2
+        
 
 #establishing the root window
 app = Window(root)
