@@ -607,7 +607,7 @@ def calculator():
             text1=Label(self, text="Calculating...", font=("Geneva 20"),
                         bg='#996Db6')
             text1.place(x=70,y=50)
-
+            
     app = WindowC(root)
     root.wm_title("My Threat Model")
     root.geometry("875x500")
@@ -1225,8 +1225,18 @@ def calculator():
         calc9 = calc9 + 2
         calc14 = calc14 + 2
         calc16 = calc16 + 2
+        app.pack_forget()
     else:
-        pass
+        app.pack_forget()
+
+    page3()
+
+#Displaying the results to the user
+def page3():
+    print("yay")
+
+    
+    
         
 
 #establishing the root window
