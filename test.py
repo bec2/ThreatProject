@@ -108,23 +108,6 @@ strideOn14 = bool()
 strideOn15 = bool()
 strideOn16 = bool()
 
-
-#Risk factors numerical values, 1=small/unexpected, 2=med, 3=large
-riskNum1 = int(3)
-riskNum2 = int(1)
-riskNum3 = int(2)
-riskNum4 = int(2)
-riskNum5 = int(1)
-riskNum6 = int(1)
-riskNum7 = int(3)
-riskNum8 = int(3)
-riskNum9 = int(3)
-riskNum10 = int(3)
-riskNum11 = int(3)
-riskNum12 = int(2)
-riskNum13 = int(1)
-riskNum14 = int(1)
-
 #Initialise variables for holding up to 16 calculations for 16 stride categs
 calc1 = float()
 calc2 = float()
@@ -830,6 +813,369 @@ def calculator():
         pass
 
     #Add risk scores to totals depending on which risks are turned on
+    #see paperwork for how risk scores are determined
+    
+    #'I connect my home devices to Wi-Fi networks that aren't mine'
+    if checkB1 == 1:
+        if calc2 > 0:
+            calc2 = calc2 + 3
+        else:
+            pass
+        if calc3 > 0:
+            calc3 = calc3 + 3
+        else:
+            pass
+        if calc5 > 0:
+            calc5 = calc5 + 3
+        else:
+            pass
+        if calc6 > 0:
+            calc6 = calc6 + 3
+        else:
+            pass
+        if calc7 > 0:
+            calc7 = calc7 + 3
+        else:
+            pass
+        if calc8 > 0:
+            calc8 = calc8 + 3
+        else:
+            pass
+        if calc9 > 0:
+            calc9 = calc9 + 3
+        else:
+            pass
+        if calc12 > 0:
+            calc12 = calc12 + 3
+        else:
+            pass
+        if calc13 > 0:
+            calc13 = calc13 + 3
+        else:
+            pass
+        if calc14 > 0:
+            calc14 = calc14 + 3
+        else:
+            pass
+        if calc15 > 0:
+            calc15 = calc15 + 3
+        else:
+            pass
+        if calc16 > 0:
+            calc16 = calc16 + 3
+        else:
+            pass
+    else:
+        pass
+
+    #'My accounts aren't all using 2FA where possible'
+    if checkB2 == 1:
+        if calc1 > 0:
+            calc1 = calc1 + 1
+        else:
+            pass
+        if calc6 > 0:
+            calc6 = calc6 + 1
+        else:
+            pass
+    else:
+        pass
+
+    #'My wi-fi passwd is the default one'
+    if checkB3 == 1:
+        if calc2 > 0:
+            calc2 = calc2 + 2
+        else:
+            pass
+        if calc3 > 0:
+            calc3 = calc3 + 2
+        else:
+            pass
+        if calc5 > 0:
+            calc5 = calc5 + 2
+        else:
+            pass
+        if calc6 > 0:
+            calc6 = calc6 + 2
+        else:
+            pass
+        if calc7 > 0:
+            calc7 = calc7 + 2
+        else:
+            pass
+        if calc8 > 0:
+            calc8 = calc8 + 2
+        else:
+            pass
+        if calc9 > 0:
+            calc9 = calc9 + 2
+        else:
+            pass
+        if calc12 > 0:
+            calc12 = calc12 + 2
+        else:
+            pass
+        if calc13 > 0:
+            calc13 = calc13 + 2
+        else:
+            pass
+        if calc14 > 0:
+            calc14 = calc14 + 2
+        else:
+            pass
+        if calc15 > 0:
+            calc15 = calc15 + 2
+        else:
+            pass
+        if calc16 > 0:
+            calc16 = calc16 + 2
+        else:
+            pass
+    else:
+        pass
+
+    #'Not all my passwds are strong'
+    if checkB4 == 1:
+        if calc2 > 0:
+            calc2 = calc2 + 2
+        else:
+            pass
+        if calc3 > 0:
+            calc3 = calc3 + 2
+        else:
+            pass
+        if calc6 > 0:
+            calc6 = calc6 + 2
+        else:
+            pass
+        if calc9 > 0:
+            calc9 = calc9 + 2
+        else:
+            pass
+        if calc15 > 0:
+            calc15 = calc15 + 2
+        else:
+            pass
+        if cac16 > 0:
+            calc16 = calc16 + 2
+        else:
+            pass
+    else:
+        pass
+
+    #'My devices are in places with sound leaks'
+    if checkB5 == 1:
+        if calc1 > 0:
+            calc1 = calc1 + 1
+        else:
+            pass
+        if calc4 > 0:
+            calc4 = calc4 + 1
+        else:
+            pass
+        if calc10 > 0:
+            calc10 = calc10 + 1
+        else:
+            pass
+        if calc12 > 0:
+            calc12 = calc12 + 1
+        else:
+            pass
+    else:
+        pass
+
+    #'I'm not opted out of first party processing'
+    if checkB6 == 1:
+        if calc11 > 0:
+            calc11 = calc11 + 1
+        else:
+            pass
+    else:
+        pass
+
+    #'I leave the mic on when doing other things'
+    if checkB7 == 1:
+        if calc1 > 0:
+            calc1 = calc1 + 2
+        else:
+            pass
+        if calc11 > 0:
+            calc11 = calc11 + 2
+        else:
+            pass
+        if calc12 > 0:
+            calc12 = calc12 + 2
+        else:
+            pass
+    else:
+        pass
+
+    #'I don't have the latest patches'
+    if checkB8 == 1:
+        if calc15 > 0:
+            calc15 = calc15 + 3
+        else:
+            pass
+        if calc16 > 0:
+            calc16 = calc16 + 3
+        else:
+            pass
+    else:
+        pass
+
+    #'I have untrusted skills or apps'
+    if checkB9 == 1:
+        if calc2 > 0:
+            calc2 = calc2 + 3
+        else:
+            pass
+        if calc3 > 0:
+            calc3 = calc3 + 3
+        else:
+            pass
+        if calc5 > 0:
+            calc5 = calc5 + 3
+        else:
+            pass
+        if calc6 > 0:
+            calc6 = calc6 + 3
+        else:
+            pass
+        if calc7 > 0:
+            calc7 = calc7 + 3
+        else:
+            pass
+        if calc8 > 0:
+            calc8 = calc8 + 3
+        else:
+            pass
+        if calc9 > 0:
+            calc9 = calc9 + 3
+        else:
+            pass
+        if calc11 > 0:
+            calc11 = calc11 + 3
+        else:
+            pass
+        if calc13 > 0:
+            calc13 = calc13 + 3
+        else:
+            pass
+        if calc14 > 0:
+            calc14 = calc14 + 3
+        else:
+            pass
+        if calc15 > 0:
+            calc15 = calc15 + 3
+        else:
+            pass
+        if calc16 > 0:
+            calc16 = calc16 + 3
+        else:
+            pass
+    else:
+        pass
+
+    #'I have untrusted devices'
+    if checkB10 == 1:
+        if calc2 > 0:
+            calc2 = calc2 + 3
+        else:
+            pass
+        if calc3 > 0:
+            calc3 = calc3 + 3
+        else:
+            pass
+        if calc5 > 0:
+            calc5 = calc5 + 3
+        else:
+            pass
+        if calc6 > 0:
+            calc6 = calc6 + 3
+        else:
+            pass
+        if calc7 > 0:
+            calc7 = calc7 + 3
+        else:
+            pass
+        if calc8 > 0:
+            calc8 = calc8 + 3
+        else:
+            pass
+        if calc9 > 0:
+            calc9 = calc9 + 3
+        else:
+            pass
+        if calc11 > 0:
+            calc11 = calc11 + 3
+        else:
+            pass
+        if calc13 > 0:
+            calc13 = calc13 + 3
+        else:
+            pass
+        if calc14 > 0:
+            calc14 = calc14 + 3
+        else:
+            pass
+        if calc15 > 0:
+            calc15 = calc15 + 3
+        else:
+            pass
+        if calc16 > 0:
+            calc16 = calc16 + 3
+        else:
+            pass
+    else:
+        pass
+
+    #'unregistered users interface with the devices'
+    if checkB11 == 1:
+        if calc1 > 0:
+            calc1 = calc1 + 2
+        else:
+            pass
+        if calc10 > 0:
+            calc10 = calc10 + 2
+        else:
+            pass
+        if calc11 > 0:
+            calc11 = calc11 + 2
+        else:
+            pass
+        if calc12 > 0:
+            calc12 = calc12 + 2
+        else:
+            pass
+    else:
+        pass
+
+    #'I don't generate arbitrary traffic while out'
+    if checkB12 == 1:
+        if calc9 > 0:
+            calc9 = calc9 + 2
+        else:
+            pass
+    else:
+        pass
+
+    #'I'm opted in to third party processing'
+    if checkB13 == 1:
+        if calc11 > 0:
+            calc11 = calc11 + 1
+        else:
+            pass
+    else:
+        pass
+
+    #'I didn't fully read ToS'
+    if checkB14 == 1:
+        if calc11 > 0:
+            calc11 = calc11 + 1
+        else:
+            pass
+    else:
+        pass
 
     #add lindunn scores
 
