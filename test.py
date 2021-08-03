@@ -588,10 +588,7 @@ def page2():
             nextButton2.place(x=750, y=140)
 
     app = Window2(root)
-    root.wm_title("My Threat Model")
-    root.geometry("875x500")
     app['bg']='#996Db6'
-    
 
 #A loading page displays text while the algorithm does its job
 #This acts as a space to run all the calculations in the background
@@ -609,10 +606,7 @@ def calculator():
             text1.place(x=70,y=50)
             
     app = WindowC(root)
-    root.wm_title("My Threat Model")
-    root.geometry("875x500")
-    app['bg']='#996Db6'
-
+    
     #Depending on what devices were added, different categories get turned on
     #catIntern should be active for any device choice
     global catIntern
@@ -1230,6 +1224,7 @@ def calculator():
         app.pack_forget()
 
     #Put all our results in a list so we can sort them
+    global calcList
     calcList = [calc1, calc2, calc3, calc4, calc5, calc6, calc7, calc8, calc9,
                 calc10, calc11, calc12, calc13]
     #Remove all null values
@@ -1237,13 +1232,14 @@ def calculator():
         calcList.remove(0)   
     #Arrange list in descending order so biggest threats are first
     calcList.sort(reverse=True)
-    print(calcList)
 
+    #Go to page 3
     page3()
 
 #Displaying the results to the user
 def page3():
-    print("yay")
+    for float in calcList:
+        print('test')
     
     
     
