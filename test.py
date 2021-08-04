@@ -606,6 +606,7 @@ def calculator():
             text1.place(x=70,y=50)
             
     app = WindowC(root)
+    app['bg']='#996Db6'
     
     #Depending on what devices were added, different categories get turned on
     #catIntern should be active for any device choice
@@ -1240,11 +1241,39 @@ def calculator():
 def page3():
     for float in calcList:
         print('test')
-    
-    
-    
-        
 
+    class Window3(Frame):
+
+        def clickExitBtn3(self):
+            exit()
+
+        def clickRestartBtn(self):
+            pass
+
+        def clickFurtherBtn(self):
+            pass
+
+        def __init__(self, master=None):
+            Frame.__init__(self, master)
+            self.master=master
+            self.pack(fill=BOTH, expand=1)
+        
+            exitButton3 = Button(self, text="Quit", command=self.clickExitBtn3)
+            exitButton3.place(x=70, y=140)
+
+            restartButton = Button(self, text="Start Over", command=self.clickRestartBtn)
+            restartButton.place(x=725, y=140)
+
+            furtherButton = Button(self, text="More advice", command=self.clickFurtherBtn)
+            furtherButton.place(x=400, y=140)
+
+    app=Window3(root)
+    app['bg']='#996Db6'
+            
+            
+
+    
+    
 #establishing the root window
 app = Window(root)
 
