@@ -17,6 +17,7 @@ d10=bool()#Smart thermostat or air monitor
 d11=bool()#Automated smart home controller
 d12=bool()#Sleep tracker
 d13=bool()#Any other
+deviceList = [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13]
 
 #Establishing the variables for risk factors
 r1=bool() #other wifi networks used
@@ -33,6 +34,7 @@ r11=bool()#other users
 r12=bool()#no arbitrary traffic
 r13=bool()#opted in to 3rd party processing
 r14=bool()#didn't read tos
+riskList = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14] 
 
 #Making a way to hold the status of a checkbox
 check1 = IntVar()
@@ -64,12 +66,18 @@ checkB12 = IntVar()
 checkB13 = IntVar()
 checkB14 = IntVar()
 
+checkList = [check1, check2, check3, check4, check5, check6, check7, check8,
+             check9, check10, check11, check12, check13, checkB1, checkB2,
+             checkB3, checkB4, checkB5, checkB6, checkB7, checkB8, checkB9,
+             checkB10, checkB11, checkB12, checkB13, checkB14]
+
 #Sort categories for the modelling algorithm
 catVoice = bool()   #voice input devices
 catSign = bool()    #device types generally requiring sign in to function
 catIntern = bool()  #devices connecting to the internal network
 catExtern = bool()  #devices communicating over the internet
 catSecure = bool()  #devices affecting physical home security
+catList = [catVoice, catSign, catIntern, catExtern, catSecure]
 
 #Threat base scores - taken from avg of the associated cvss values to 1dp
 #The numbers relate to the matching threat from STRIDE - see paper
@@ -107,6 +115,10 @@ strideOn13 = bool()
 strideOn14 = bool()
 strideOn15 = bool()
 strideOn16 = bool()
+strideOnList = [strideOn1, strideOn2, strideOn3, strideOn4, strideOn5,
+                strideOn6, strideOn7, strideOn8, strideOn9, strideOn10,
+                strideOn11, strideOn12, strideOn13, strideOn14, strideOn15,
+                strideOn16]
 
 #Initialise variables for holding up to 16 calculations for 16 stride categs
 calc1 = float()
@@ -125,6 +137,8 @@ calc13 = float()
 calc14 = float()
 calc15 = float()
 calc16 = float()
+calcList = [calc1, calc2, calc3, calc4, calc5, calc6, calc7, calc8, calc9,
+            calc10, calc11, calc12, calc13, calc14, calc15, calc16]
 
 #define onclick functions for checkboxes
 def click1():
@@ -1225,14 +1239,14 @@ def calculator():
         app.pack_forget()
 
     #Put all our results in a list so we can sort them
-    global calcList
-    calcList = [calc1, calc2, calc3, calc4, calc5, calc6, calc7, calc8, calc9,
+    global calcList2
+    calcList2 = [calc1, calc2, calc3, calc4, calc5, calc6, calc7, calc8, calc9,
                 calc10, calc11, calc12, calc13, calc14, calc15, calc16]
     #Remove all null values
-    while 0 in calcList:
-        calcList.remove(0)   
+    while 0 in calcList2:
+        calcList2.remove(0)   
     #Arrange list in descending order so biggest threats are first
-    calcList.sort(reverse=True)
+    calcList2.sort(reverse=True)
 
     #Go to page 3
     page3()
@@ -1241,8 +1255,8 @@ def calculator():
 def page3():
 
     #TESTING SORT RECALL
-    print(calcList)
-    for float in calcList:
+    print(calcList2)
+    for float in calcList2:
         if float is calc1:
             print("s1 here")
         elif float is calc2:
@@ -1284,67 +1298,31 @@ def page3():
         def clickExitBtn3(self):
             exit()
 
-        #This restarts the process from stage 1. We clear every variable.
+        #This restarts the process from stage 1.
+        #We clear every dynamic variable. 
         def clickRestartBtn(self):
-            d1 = 0
-            d2 = 0
-            d3 = 0
-            d4 = 0
-            d5 = 0
-            d6 = 0
-            d7 = 0
-            d8 = 0
-            d9 = 0
-            d10 = 0
-            d11 = 0
-            d12 = 0
-            d13 = 0
-            r1 = 0
-            r2 = 0
-            r3 = 0
-            r4 = 0
-            r5 = 0
-            r6 = 0
-            r7 = 0
-            r8 = 0
-            r9 = 0
-            r10 = 0
-            r11 = 0
-            r12 = 0
-            r13 = 0
-            r14 = 0
-            check1 = 0
-            check2 = 0
-            check3 = 0
-            check4 = 0
-            check5 = 0
-            check6 = 0
-            check7 = 0
-            check8 = 0
-            check9 = 0
-            check10 = 0
-            check11 = 0
-            check12 = 0
-            check13 = 0
-            checkB1 = 0
-            checkB2 = 0
-            checkB3 = 0
-            checkB4 = 0
-            checkB5 = 0
-            checkB6 = 0
-            checkB7 = 0
-            checkB8 = 0
-            checkB9 = 0
-            checkB10 = 0
-            checkB11 = 0
-            checkB12 = 0
-            checkB13 = 0
-            checkB14 = 0
-            catVoice = 0
-            catSign = 0
-            catIntern = 0
-            catExtern = 0
-            catSecure = 0
+            global deviceList
+            global riskList
+            global checkList
+            global catList
+            global strideOnList
+            global calcList
+
+            for bool in deviceList:
+                bool = 0
+            for bool in riskList:
+                bool = 0
+            for IntVar in checkList:
+                IntVar = 0
+            for bool in catList:
+                bool = 0
+            for bool in strideOnList:
+                bool = 0
+            for float in calcList:
+                float = 0
+
+            #ADD CODE TO RETURN TO P1
+
 
         def clickFurtherBtn(self):
             pass
