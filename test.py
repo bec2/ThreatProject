@@ -1239,8 +1239,39 @@ def calculator():
 
 #Displaying the results to the user
 def page3():
+
+    #TESTING SORT RECALL
+    print(calcList)
     for float in calcList:
-        print('test')
+        if float == calc1:
+            print("s1 here")
+        elif float == calc2:
+            print("s2 here")
+        elif float == calc3:
+            print("s3 here")
+        elif float == calc4:
+            print("s4 here")
+        elif float == calc5:
+            print("s5 here")
+        elif float == calc6:
+            print("s6 here")
+        elif float == calc7:
+            print("s7 here")
+        elif float == calc8:
+            print("s8 here")
+        elif float == calc9:
+            print("s9 here")
+        elif float == calc10:
+            print("s10 here")
+        elif float == calc11:
+            print("s11 here")
+        elif float == calc12:
+            print("s12 here")
+        elif float == calc13:
+            print("s13 here")
+        else:
+            print("houston we have a problem")
+    #END OF TESTING GARBAGE
 
     class Window3(Frame):
 
