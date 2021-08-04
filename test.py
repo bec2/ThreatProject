@@ -1227,7 +1227,7 @@ def calculator():
     #Put all our results in a list so we can sort them
     global calcList
     calcList = [calc1, calc2, calc3, calc4, calc5, calc6, calc7, calc8, calc9,
-                calc10, calc11, calc12, calc13]
+                calc10, calc11, calc12, calc13, calc14, calc15, calc16]
     #Remove all null values
     while 0 in calcList:
         calcList.remove(0)   
@@ -1269,6 +1269,12 @@ def page3():
             print("s12 here")
         elif float == calc13:
             print("s13 here")
+        elif float == calc14:
+            print("s14 here")
+        elif float == calc15:
+            print("s15 here")
+        elif float == calc16:
+            print("s16 here")
         else:
             print("houston we have a problem")
     #END OF TESTING GARBAGE
@@ -1278,8 +1284,67 @@ def page3():
         def clickExitBtn3(self):
             exit()
 
+        #This restarts the process from stage 1. We clear every variable.
         def clickRestartBtn(self):
-            pass
+            d1 = 0
+            d2 = 0
+            d3 = 0
+            d4 = 0
+            d5 = 0
+            d6 = 0
+            d7 = 0
+            d8 = 0
+            d9 = 0
+            d10 = 0
+            d11 = 0
+            d12 = 0
+            d13 = 0
+            r1 = 0
+            r2 = 0
+            r3 = 0
+            r4 = 0
+            r5 = 0
+            r6 = 0
+            r7 = 0
+            r8 = 0
+            r9 = 0
+            r10 = 0
+            r11 = 0
+            r12 = 0
+            r13 = 0
+            r14 = 0
+            check1 = 0
+            check2 = 0
+            check3 = 0
+            check4 = 0
+            check5 = 0
+            check6 = 0
+            check7 = 0
+            check8 = 0
+            check9 = 0
+            check10 = 0
+            check11 = 0
+            check12 = 0
+            check13 = 0
+            checkB1 = 0
+            checkB2 = 0
+            checkB3 = 0
+            checkB4 = 0
+            checkB5 = 0
+            checkB6 = 0
+            checkB7 = 0
+            checkB8 = 0
+            checkB9 = 0
+            checkB10 = 0
+            checkB11 = 0
+            checkB12 = 0
+            checkB13 = 0
+            checkB14 = 0
+            catVoice = 0
+            catSign = 0
+            catIntern = 0
+            catExtern = 0
+            catSecure = 0
 
         def clickFurtherBtn(self):
             pass
