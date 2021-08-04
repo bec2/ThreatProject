@@ -1254,45 +1254,6 @@ def calculator():
 #Displaying the results to the user
 def page3():
 
-    #TESTING SORT RECALL
-    print(calcList2)
-    for float in calcList2:
-        if float is calc1:
-            print("s1 here")
-        elif float is calc2:
-            print("s2 here")
-        elif float is calc3:
-            print("s3 here")
-        elif float is calc4:
-            print("s4 here")
-        elif float is calc5:
-            print("s5 here")
-        elif float is calc6:
-            print("s6 here")
-        elif float is calc7:
-            print("s7 here")
-        elif float is calc8:
-            print("s8 here")
-        elif float is calc9:
-            print("s9 here")
-        elif float is calc10:
-            print("s10 here")
-        elif float is calc11:
-            print("s11 here")
-        elif float is calc12:
-            print("s12 here")
-        elif float is calc13:
-            print("s13 here")
-        elif float is calc14:
-            print("s14 here")
-        elif float is calc15:
-            print("s15 here")
-        elif float is calc16:
-            print("s16 here")
-        else:
-            print("houston we have a problem")
-    #END OF TESTING GARBAGE
-
     class Window3(Frame):
 
         def clickExitBtn3(self):
@@ -1333,20 +1294,88 @@ def page3():
             self.pack(fill=BOTH, expand=1)
         
             exitButton3 = Button(self, text="Quit", command=self.clickExitBtn3)
-            exitButton3.place(x=70, y=140)
+            exitButton3.place(x=70, y=50)
 
             restartButton = Button(self, text="Start Over", command=self.clickRestartBtn)
-            restartButton.place(x=725, y=140)
+            restartButton.place(x=70, y=90)
 
             furtherButton = Button(self, text="More advice", command=self.clickFurtherBtn)
-            furtherButton.place(x=400, y=140)
+            furtherButton.place(x=70, y=130)
+
+            #Print results in the order we sorted them
+            for float in calcList2:
+                if float is calc1:
+                    output1 = Label (self, text="1", bg="#996Db6",
+                                     font=("Geneva 18"))
+                    output1.pack(padx=(50,50))
+                elif float is calc2:
+                    output2 = Label (self, text="2", bg="#996Db6",
+                                     font=("Geneva 18"))
+                    output2.pack(padx=(50,50))
+                elif float is calc3:
+                    output3 = Label (self, text="3", bg="#996Db6",
+                                     font=("Geneva 18"))
+                    output3.pack(padx=(50,50))
+                elif float is calc4:
+                    output4 = Label (self, text="4", bg="#996Db6",
+                                     font=("Geneva 18"))
+                    output4.pack(padx=(50,50))
+                elif float is calc5:
+                    output5 = Label (self, text="5", bg="#996Db6",
+                                     font=("Geneva 18"))
+                    output5.pack(padx=(50,50))
+                elif float is calc6:
+                    output6 = Label (self, text="6", bg="#996Db6",
+                                     font=("Geneva 18"))
+                    output6.pack(padx=(50,50))
+                elif float is calc7:
+                    output7 = Label (self, text="7", bg="#996Db6",
+                                     font=("Geneva 18"))
+                    output7.pack(padx=(50,50))
+                elif float is calc8:
+                    output8 = Label (self, text="8", bg="#996Db6",
+                                     font=("Geneva 18"))
+                    output8.pack(padx=(50,50))
+                elif float is calc9:
+                    output9 = Label (self, text="9", bg="#996Db6",
+                                     font=("Geneva 18"))
+                    output9.pack(padx=(50,50))
+                elif float is calc10:
+                    output10 = Label (self, text="10", bg="#996Db6",
+                                      font = ("Geneva 18"))
+                    output10.pack(padx=(50,50))
+                elif float is calc11:
+                    output11 = Label (self, text="11", bg="#996Db6",
+                                      font = ("Geneva 18"))
+                    output11.pack(padx=(50,50))
+                elif float is calc12:
+                    output12 = Label (self, text="12", bg="#996Db6",
+                                      font = ("Geneva 18"))
+                    output12.pack(padx=(50,50))
+                elif float is calc13:
+                    output13 = Label (self, text="13", bg="#996Db6",
+                                      font = ("Geneva 18"))
+                    output13.pack(padx=(50,50))
+                elif float is calc14:
+                    output14 = Label (self, text="14", bg="#996Db6",
+                                      font = ("Geneva 18"))
+                    output14.pack(padx=(50,50))
+                elif float is calc15:
+                    output15 = Label (self, text="15", bg="#996Db6",
+                                      font = ("Geneva 18"))
+                    output15.pack(padx=(50,50))
+                elif float is calc16:
+                    output16 = Label (self, text="15", bg="#996Db6",
+                                      font = ("Geneva 18"))
+                    output16.pack(padx=(50,50))
+                else:
+                    print("Error with unidentifiable value in array")
+                
 
     app=Window3(root)
+    root.geometry("875x550")
     app['bg']='#996Db6'
-            
-            
-
-    
+               
     
 #establishing the root window
 app = Window(root)
