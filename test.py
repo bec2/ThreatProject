@@ -1243,37 +1243,37 @@ def page3():
     #TESTING SORT RECALL
     print(calcList)
     for float in calcList:
-        if float == calc1:
+        if float is calc1:
             print("s1 here")
-        elif float == calc2:
+        elif float is calc2:
             print("s2 here")
-        elif float == calc3:
+        elif float is calc3:
             print("s3 here")
-        elif float == calc4:
+        elif float is calc4:
             print("s4 here")
-        elif float == calc5:
+        elif float is calc5:
             print("s5 here")
-        elif float == calc6:
+        elif float is calc6:
             print("s6 here")
-        elif float == calc7:
+        elif float is calc7:
             print("s7 here")
-        elif float == calc8:
+        elif float is calc8:
             print("s8 here")
-        elif float == calc9:
+        elif float is calc9:
             print("s9 here")
-        elif float == calc10:
+        elif float is calc10:
             print("s10 here")
-        elif float == calc11:
+        elif float is calc11:
             print("s11 here")
-        elif float == calc12:
+        elif float is calc12:
             print("s12 here")
-        elif float == calc13:
+        elif float is calc13:
             print("s13 here")
-        elif float == calc14:
+        elif float is calc14:
             print("s14 here")
-        elif float == calc15:
+        elif float is calc15:
             print("s15 here")
-        elif float == calc16:
+        elif float is calc16:
             print("s16 here")
         else:
             print("houston we have a problem")
