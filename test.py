@@ -1308,42 +1308,41 @@ def page3():
 
             for float in calcList2:
                 if float is calc1:
-                    listbox.insert(16,"1")
+                    listbox.insert(END,"1")
                 elif float is calc2:
-                    listbox.insert(16,"2")
+                    listbox.insert(END,"2")
                 elif float is calc3:
-                    listbox.insert(16,"3")
+                    listbox.insert(END,"3")
                 elif float is calc4:
-                    listbox.insert(16,"4")
+                    listbox.insert(END,"4")
                 elif float is calc5:
-                    listbox.insert(16,"5")
+                    listbox.insert(END,"5")
                 elif float is calc6:
-                    listbox.insert(16,"6")
+                    listbox.insert(END,"6")
                 elif float is calc7:
-                    listbox.insert(16,"7")
+                    listbox.insert(END,"7")
                 elif float is calc8:
-                    listbox.insert(16,"8")
+                    listbox.insert(END,"8")
                 elif float is calc9:
-                    listbox.insert(16,"9")
+                    listbox.insert(END,"9")
                 elif float is calc10:
-                    listbox.insert(16,"10")
+                    listbox.insert(END,"10")
                 elif float is calc11:
-                    listbox.insert(16,"11")
+                    listbox.insert(END,"11")
                 elif float is calc12:
-                    listbox.insert(16,"12")
+                    listbox.insert(END,"12")
                 elif float is calc13:
-                    listbox.insert(16,"13")
+                    listbox.insert(END,"13")
                 elif float is calc14:
-                    listbox.insert(16,"14")
+                    listbox.insert(END,"14")
                 elif float is calc15:
-                    listbox.insert(16,"15")
+                    listbox.insert(END,"15")
                 elif float is calc16:
-                    listbox.insert(16,"16")
+                    listbox.insert(END,"16")
                 else:
                     print("Error reading list")
                     
             listbox.pack()
-
             sb = Scrollbar(self, orient=VERTICAL)
             sb.pack(side=RIGHT, fill=BOTH)
             listbox.configure(yscrollcommand=sb.set)
