@@ -1267,6 +1267,13 @@ def page3():
             furtherButton = Button(self, text="More advice", command=self.clickFurtherBtn)
             furtherButton.place(x=70, y=90)
 
+            text1 = Label(self, text="Hint: Hover the mouse over ", font="Geneva 10")
+            text2 = Label(self, text="the box and use the mouse  ", font="Geneva 10")
+            text3 = Label(self, text="wheel to scroll up and down.", font="Geneva 10")
+            text1.place(x=650, y=10)
+            text2.place(x=650, y=30)
+            text3.place(x=650, y=50)
+
             #Convert calc values to str so we can display them in a list
             calcS1=str(calc1)
             calcS2=str(calc2)
