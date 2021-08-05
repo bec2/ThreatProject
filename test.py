@@ -1303,44 +1303,62 @@ def page3():
             furtherButton = Button(self, text="More advice", command=self.clickFurtherBtn)
             furtherButton.place(x=70, y=130)
 
+            #Convert calc values to str so we can display them in a list
+            calcS1=str(calc1)
+            calcS2=str(calc2)
+            calcS3=str(calc3)
+            calcS4=str(calc4)
+            calcS5=str(calc5)
+            calcS6=str(calc6)
+            calcS7=str(calc7)
+            calcS8=str(calc8)
+            calcS9=str(calc9)
+            calcS10=str(calc10)
+            calcS11=str(calc11)
+            calcS12=str(calc12)
+            calcS13=str(calc13)
+            calcS14=str(calc14)
+            calcS15=str(calc15)
+            calcS16=str(calc16)
+
             #Print results in the order we sorted them
             listbox = Listbox(self, width="50", height="32")
 
             for float in calcList2:
                 if float is calc1:
-                    listbox.insert(END,"1")
+                    listbox.insert(END,"1 [Score: "+calcS1+"]")
                 elif float is calc2:
-                    listbox.insert(END,"2")
+                    listbox.insert(END,"2 [Score: "+calcS2+"]")
                 elif float is calc3:
-                    listbox.insert(END,"3")
+                    listbox.insert(END,"3 [Score: "+calcS3+"]")
                 elif float is calc4:
-                    listbox.insert(END,"4")
+                    listbox.insert(END,"4 [Score: "+calcS4+"]")
                 elif float is calc5:
-                    listbox.insert(END,"5")
+                    listbox.insert(END,"5 [Score: "+calcS5+"]")
                 elif float is calc6:
-                    listbox.insert(END,"6")
+                    listbox.insert(END,"6 [Score: "+calcS6+"]")
                 elif float is calc7:
-                    listbox.insert(END,"7")
+                    listbox.insert(END,"7 [Score: "+calcS7+"]")
                 elif float is calc8:
-                    listbox.insert(END,"8")
+                    listbox.insert(END,"8 [Score: "+calcS8+"]")
                 elif float is calc9:
-                    listbox.insert(END,"9")
+                    listbox.insert(END,"9 [Score: "+calcS9+"]")
                 elif float is calc10:
-                    listbox.insert(END,"10")
+                    listbox.insert(END,"10 [Score: "+calcS10+"]")
                 elif float is calc11:
-                    listbox.insert(END,"11")
+                    listbox.insert(END,"11 [Score: "+calcS11+"]")
                 elif float is calc12:
-                    listbox.insert(END,"12")
+                    listbox.insert(END,"12 [Score: "+calcS12+"]")
                 elif float is calc13:
-                    listbox.insert(END,"13")
+                    listbox.insert(END,"13 [Score: "+calcS13+"]")
                 elif float is calc14:
-                    listbox.insert(END,"14")
+                    listbox.insert(END,"14 [Score: "+calcS14+"]")
                 elif float is calc15:
-                    listbox.insert(END,"15")
+                    listbox.insert(END,"15 [Score: "+calcS15+"]")
                 elif float is calc16:
-                    listbox.insert(END,"16")
+                    listbox.insert(END,"16 [Score: "+calcS16+"]")
                 else:
-                    print("Error reading list")
+                    print("error: unexpected value in list")
                     
             listbox.pack()
             sb = Scrollbar(self, orient=VERTICAL)
