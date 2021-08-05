@@ -17,7 +17,6 @@ d10=bool()#Smart thermostat or air monitor
 d11=bool()#Automated smart home controller
 d12=bool()#Sleep tracker
 d13=bool()#Any other
-deviceList = [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13]
 
 #Establishing the variables for risk factors
 r1=bool() #other wifi networks used
@@ -66,8 +65,7 @@ checkB12 = IntVar()
 checkB13 = IntVar()
 checkB14 = IntVar()
 
-checkList = [check1, check2, check3, check4, check5, check6, check7, check8,
-             check9, check10, check11, check12, check13, checkB1, checkB2,
+checkBList = [checkB1, checkB2,
              checkB3, checkB4, checkB5, checkB6, checkB7, checkB8, checkB9,
              checkB10, checkB11, checkB12, checkB13, checkB14]
 
@@ -115,10 +113,6 @@ strideOn13 = bool()
 strideOn14 = bool()
 strideOn15 = bool()
 strideOn16 = bool()
-strideOnList = [strideOn1, strideOn2, strideOn3, strideOn4, strideOn5,
-                strideOn6, strideOn7, strideOn8, strideOn9, strideOn10,
-                strideOn11, strideOn12, strideOn13, strideOn14, strideOn15,
-                strideOn16]
 
 #Initialise variables for holding up to 16 calculations for 16 stride categs
 calc1 = float()
@@ -1259,33 +1253,6 @@ def page3():
         def clickExitBtn3(self):
             exit()
 
-        #This restarts the process from stage 1.
-        #We clear every dynamic variable.
-        #Retry as 'go back to risk selection' button???
-        def clickRestartBtn(self):
-            global deviceList
-            global riskList
-            global checkList
-            global catList
-            global strideOnList
-            global calcList
-
-            for bool in deviceList:
-                bool = 0
-            for bool in riskList:
-                bool = 0
-            for IntVar in checkList:
-                IntVar = 0
-            for bool in catList:
-                bool = 0
-            for bool in strideOnList:
-                bool = 0
-            for float in calcList:
-                float = 0
-
-            #ADD CODE TO RETURN TO P1
-
-
         def clickFurtherBtn(self):
             pass
 
@@ -1297,11 +1264,8 @@ def page3():
             exitButton3 = Button(self, text="Quit", command=self.clickExitBtn3)
             exitButton3.place(x=70, y=50)
 
-            restartButton = Button(self, text="Start Over", command=self.clickRestartBtn)
-            restartButton.place(x=70, y=90)
-
             furtherButton = Button(self, text="More advice", command=self.clickFurtherBtn)
-            furtherButton.place(x=70, y=130)
+            furtherButton.place(x=70, y=90)
 
             #Convert calc values to str so we can display them in a list
             calcS1=str(calc1)
