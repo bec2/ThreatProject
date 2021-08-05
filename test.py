@@ -1291,36 +1291,100 @@ def page3():
             for float in calcList2:
                 if float is calc1:
                     listbox.insert(END,"1 [Score: "+calcS1+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc2:
                     listbox.insert(END,"2 [Score: "+calcS2+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc3:
                     listbox.insert(END,"3 [Score: "+calcS3+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc4:
                     listbox.insert(END,"4 [Score: "+calcS4+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc5:
                     listbox.insert(END,"5 [Score: "+calcS5+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc6:
                     listbox.insert(END,"6 [Score: "+calcS6+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc7:
                     listbox.insert(END,"7 [Score: "+calcS7+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc8:
                     listbox.insert(END,"8 [Score: "+calcS8+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc9:
                     listbox.insert(END,"9 [Score: "+calcS9+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc10:
                     listbox.insert(END,"10 [Score: "+calcS10+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc11:
                     listbox.insert(END,"11 [Score: "+calcS11+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc12:
                     listbox.insert(END,"12 [Score: "+calcS12+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc13:
                     listbox.insert(END,"13 [Score: "+calcS13+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc14:
                     listbox.insert(END,"14 [Score: "+calcS14+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc15:
                     listbox.insert(END,"15 [Score: "+calcS15+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 elif float is calc16:
                     listbox.insert(END,"16 [Score: "+calcS16+"]")
+                    listbox.insert(END,"describe risk")
+                    listbox.insert(END,"how to mitigate")
+                    listbox.insert(END,"questions to reflect on")
+                    listbox.insert(END,"")
                 else:
                     print("error: unexpected value in list")
                     
