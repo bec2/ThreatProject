@@ -1260,7 +1260,8 @@ def page3():
             exit()
 
         #This restarts the process from stage 1.
-        #We clear every dynamic variable. 
+        #We clear every dynamic variable.
+        #Retry as 'go back to risk selection' button???
         def clickRestartBtn(self):
             global deviceList
             global riskList
@@ -1303,77 +1304,57 @@ def page3():
             furtherButton.place(x=70, y=130)
 
             #Print results in the order we sorted them
+            listbox = Listbox(self, width="50", height="32")
+
             for float in calcList2:
                 if float is calc1:
-                    output1 = Label (self, text="1", bg="#996Db6",
-                                     font=("Geneva 18"))
-                    output1.pack(padx=(50,50))
+                    listbox.insert(16,"1")
                 elif float is calc2:
-                    output2 = Label (self, text="2", bg="#996Db6",
-                                     font=("Geneva 18"))
-                    output2.pack(padx=(50,50))
+                    listbox.insert(16,"2")
                 elif float is calc3:
-                    output3 = Label (self, text="3", bg="#996Db6",
-                                     font=("Geneva 18"))
-                    output3.pack(padx=(50,50))
+                    listbox.insert(16,"3")
                 elif float is calc4:
-                    output4 = Label (self, text="4", bg="#996Db6",
-                                     font=("Geneva 18"))
-                    output4.pack(padx=(50,50))
+                    listbox.insert(16,"4")
                 elif float is calc5:
-                    output5 = Label (self, text="5", bg="#996Db6",
-                                     font=("Geneva 18"))
-                    output5.pack(padx=(50,50))
+                    listbox.insert(16,"5")
                 elif float is calc6:
-                    output6 = Label (self, text="6", bg="#996Db6",
-                                     font=("Geneva 18"))
-                    output6.pack(padx=(50,50))
+                    listbox.insert(16,"6")
                 elif float is calc7:
-                    output7 = Label (self, text="7", bg="#996Db6",
-                                     font=("Geneva 18"))
-                    output7.pack(padx=(50,50))
+                    listbox.insert(16,"7")
                 elif float is calc8:
-                    output8 = Label (self, text="8", bg="#996Db6",
-                                     font=("Geneva 18"))
-                    output8.pack(padx=(50,50))
+                    listbox.insert(16,"8")
                 elif float is calc9:
-                    output9 = Label (self, text="9", bg="#996Db6",
-                                     font=("Geneva 18"))
-                    output9.pack(padx=(50,50))
+                    listbox.insert(16,"9")
                 elif float is calc10:
-                    output10 = Label (self, text="10", bg="#996Db6",
-                                      font = ("Geneva 18"))
-                    output10.pack(padx=(50,50))
+                    listbox.insert(16,"10")
                 elif float is calc11:
-                    output11 = Label (self, text="11", bg="#996Db6",
-                                      font = ("Geneva 18"))
-                    output11.pack(padx=(50,50))
+                    listbox.insert(16,"11")
                 elif float is calc12:
-                    output12 = Label (self, text="12", bg="#996Db6",
-                                      font = ("Geneva 18"))
-                    output12.pack(padx=(50,50))
+                    listbox.insert(16,"12")
                 elif float is calc13:
-                    output13 = Label (self, text="13", bg="#996Db6",
-                                      font = ("Geneva 18"))
-                    output13.pack(padx=(50,50))
+                    listbox.insert(16,"13")
                 elif float is calc14:
-                    output14 = Label (self, text="14", bg="#996Db6",
-                                      font = ("Geneva 18"))
-                    output14.pack(padx=(50,50))
+                    listbox.insert(16,"14")
                 elif float is calc15:
-                    output15 = Label (self, text="15", bg="#996Db6",
-                                      font = ("Geneva 18"))
-                    output15.pack(padx=(50,50))
+                    listbox.insert(16,"15")
                 elif float is calc16:
-                    output16 = Label (self, text="15", bg="#996Db6",
-                                      font = ("Geneva 18"))
-                    output16.pack(padx=(50,50))
+                    listbox.insert(16,"16")
                 else:
-                    print("Error with unidentifiable value in array")
+                    print("Error reading list")
+                    
+            listbox.pack()
+
+            sb = Scrollbar(self, orient=VERTICAL)
+            sb.pack(side=RIGHT, fill=BOTH)
+            listbox.configure(yscrollcommand=sb.set)
+            sb.config(command=listbox.yview)
+
+                
+                
                 
 
     app=Window3(root)
-    root.geometry("875x550")
+    root.geometry("875x500")
     app['bg']='#996Db6'
                
     
