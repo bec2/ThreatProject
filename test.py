@@ -1,4 +1,5 @@
 from tkinter import *
+import webbrowser
 
 #need to declare this to display things later
 root=Tk()
@@ -1252,9 +1253,58 @@ def page3():
 
         def clickExitBtn3(self):
             exit()
-
+            
+        #further guidance tab
         def clickFurtherBtn(self):
-            pass
+            top = Toplevel(root)
+            top.geometry("800x520")
+            top.title("Further Guidance")
+            #Some questions based on LINDUNN GO findings
+            Label(top, text="More questions to ask yourself:",
+                  font=('Geneva 15')).place(x=10, y=00)
+            Label(top, text="How much sensitive data is stored on my device?").place(x=10,y=30)
+            Label(top, text="Are my actions being used to build a profile on me, for example to target ads at me?").place(x=10,y=50)
+            Label(top, text="Do interactions with other users affect the data that is linked to me personally?").place(x=10,y=70)
+            Label(top, text="Is everyone using the device aware of the data collection rules and able to reasonably consent to them?").place(x=10,y=90)
+            Label(top, text="Does usage behaviour reveal anything about my personal safety, for example what times I'm not home?").place(x=10,y=110)
+            Label(top, text="How much do the manufacturers know about my personal life through my device usage, and am I ok with this?").place(x=10,y=130)
+            Label(top, text="Are my usage patterns linkable to me personally, and am I okay with this?").place(x=10, y=150)
+            Label(top, text="If others interact with my device, could they do things that might incriminate me?").place(x=10, y=170)
+            Label(top, text="Could my device data be used to blackmail me?").place(x=10, y=190)
+            Label(top, text="Do my device manufacturers have history of privacy violations or ulterior motives I'm not ok with?").place(x=10,y=210)
+            Label(top, text="Do my devices have any known vulnerabilities that I could find by searching online?").place(x=10,y=230)
+            Label(top, text="Do I really know where my personal data goes and everything it's used for?").place(x=10, y=250)
+            Label(top, text="If you find yourself worried by the answers to any of the above, consider how", font = "Geneva 15").place(x=10,y=270)
+            Label(top, text="much you use the device and if you feel safe/comfortable continuing to do so.", font = "Geneva 15").place(x=10,y=300)
+
+            #showing the user where they can find more detailed info for their specific devices
+            def callback(url):
+                webbrowser.open_new(url)
+
+            Label(top, text="For more individualised device information, consult manufacturer info:", font="Geneva 15").place(x=10, y=350)
+            link1 = Label(top, text="Apple devices", fg="red", cursor="hand2", font="Geneva 10 underline")
+            link1.place(x=10, y=380)
+            link1.bind("<Button-1>", lambda e: callback("https://support.apple.com/manuals"))
+
+            link2 = Label(top, text="Samsung devices", fg="red", cursor="hand2", font="Geneva 10 underline")
+            link2.place(x=10, y=400)
+            link2.bind("<Button-1>", lambda e: callback("https://www.samsung.com/us/support/downloads/"))
+
+            link3 = Label(top, text="Google devices", fg="red", cursor="hand2", font="Geneva 10 underline")
+            link3.place(x=10, y=420)
+            link3.bind("<Button-1>", lambda e: callback("https://support.google.com/?hl=en"))
+
+            link4 = Label(top, text="Amazon devices", fg="red", cursor="hand2", font="Geneva 10 underline")
+            link4.place(x=10, y=440)
+            link4.bind("<Button-1>", lambda e: callback("https://www.amazon.co.uk/gp/help/customer/display.html"))
+            
+            link5 = Label(top, text="See IoTLineup for links to many more home IoT devices.", fg="red", cursor="hand2", font="Geneva 10 underline")
+            link5.place(x=10, y=460)
+            link5.bind("<Button-1>", lambda e: callback("http://iotlineup.com/"))
+
+            Label(top, text="The programmer of this app is not responsible for external content.", font = "Geneva 10").place(x=10, y=480)
+
+                       
 
         def __init__(self, master=None):
             Frame.__init__(self, master)
@@ -1445,35 +1495,6 @@ def page3():
                     listbox.insert(END,"")
                 else:
                     print("error: unexpected value in list")
-
-                #Add some questions for user to reflect on, based on some of
-                #the factors of LINDUNN GO.
-                    #MOVE TO FURTHER GUIDANCE
-                #listbox.insert(END,"QUESTIONS TO ASK YOURSELF:")
-                #listbox.insert(END,"1) How much sensitive data is stored on my device?")
-                #listbox.insert(END,"2) Are my actions being used to build a profile on")
-                #listbox.insert(END," me, for example to target ads to me?")
-                #listbox.insert(END,"3) Do interactions with other users affect the data")
-                #listbox.insert(END," that is linked to me personally?")
-                #listbox.insert(END,"4) Is everyone who uses the device aware of the")
-                #listbox.insert(END," data collection rules and able to reasonably")
-                #listbox.insert(END," consent to them?")
-                #listbox.insert(END,"5) Does usage behaviour reveal anything about my")
-                #listbox.insert(END," personal safety, for example when I'm not home?")
-                #listbox.insert(END,"6) How much do the manufacturers know about my")
-                #listbox.insert(END," personal life and likes through my device usage,")
-                #listbox.insert(END," and am I okay with this?")
-                #listbox.insert(END,"7) Are my usage patterns linkable to me personally,")
-                #listbox.insert(END," and am I okay with this?")
-                #listbox.insert(END,"8) If other people interact with my device, could")
-                #listbox.insert(END," they do things that might incriminate me?")
-                #listbox.insert(END,"9) Could my device data be used to blackmail me?")
-                #listbox.insert(END,"10) Do my device manufacturers have a history of")
-                #listbox.insert(END," privacy violations or ulterior motives I do not")
-                #listbox.insert(END," agree with?")
-                #listbox.insert(END,"11) Do my devices have any known vulnerabilities?")
-                #listbox.insert(END,"12) Do I actually know where my personal data goes and")
-                #listbox.insert(END," everything it is being used for?")
                     
             listbox.pack()
             
