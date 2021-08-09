@@ -34,7 +34,6 @@ r11=bool()#other users
 r12=bool()#no arbitrary traffic
 r13=bool()#opted in to 3rd party processing
 r14=bool()#didn't read tos
-riskList = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14] 
 
 #Making a way to hold the status of a checkbox
 check1 = IntVar()
@@ -66,17 +65,12 @@ checkB12 = IntVar()
 checkB13 = IntVar()
 checkB14 = IntVar()
 
-checkBList = [checkB1, checkB2,
-             checkB3, checkB4, checkB5, checkB6, checkB7, checkB8, checkB9,
-             checkB10, checkB11, checkB12, checkB13, checkB14]
-
 #Sort categories for the modelling algorithm
 catVoice = bool()   #voice input devices
 catSign = bool()    #device types generally requiring sign in to function
 catIntern = bool()  #devices connecting to the internal network
 catExtern = bool()  #devices communicating over the internet
 catSecure = bool()  #devices affecting physical home security
-catList = [catVoice, catSign, catIntern, catExtern, catSecure]
 
 #Threat base scores - taken from avg of the associated cvss values to 1dp
 #The numbers relate to the matching threat from STRIDE - see paper
@@ -132,8 +126,6 @@ calc13 = float()
 calc14 = float()
 calc15 = float()
 calc16 = float()
-calcList = [calc1, calc2, calc3, calc4, calc5, calc6, calc7, calc8, calc9,
-            calc10, calc11, calc12, calc13, calc14, calc15, calc16]
 
 #define onclick functions for checkboxes
 def click1():
@@ -354,7 +346,7 @@ def clickB14():
         r14 = 0
 
 
-#establishing the Window class and giving it an exit button
+#establishing the Window class
 class Window(Frame):
 
     
@@ -438,6 +430,7 @@ class Window(Frame):
         exit()
 
     #Define what clicking the next button does
+    #Check the user has selected at least one item before going ahead
     def clickNextButton(self):
         if d1 == 0 and d2 == 0 and d3 == 0 and d4 == 0 and d5 == 0 and d6 == 0 and d7 == 0 and d8 == 0 and d9 == 0 and d10 == 0 and d11 == 0 and d12 == 0 and d13 == 0:
             top = Toplevel(root)
@@ -1497,11 +1490,7 @@ def page3():
                     print("error: unexpected value in list")
                     
             listbox.pack()
-            
-
-                
-                
-                
+                    
 
     app=Window3(root)
     root.geometry("875x500")
