@@ -26,7 +26,7 @@ d3=bool() #Smart security cam
 d4=bool() #Smart doorbell
 d5=bool() #Smart lighting
 d6=bool() #Smart fitness aid
-d7=bool() #Smart kitchenwear
+d7=bool() #Smart kitchenware
 d8=bool() #Smart home security locks
 d9=bool() #Amazon Dash
 d10=bool()#Smart thermostat or air monitor
@@ -404,7 +404,7 @@ class Window(Frame):
                        variable=check6, onvalue=1, offvalue=0, command=click6)
         self.c6.pack()
 
-        self.c7=Checkbutton(root, text="Smart kitchenwear", variable=check7,
+        self.c7=Checkbutton(root, text="Smart kitchenware", variable=check7,
                        onvalue=1, offvalue=0, command=click7)
         self.c7.pack()
 
@@ -1431,7 +1431,7 @@ def page3():
                     listbox.insert(END,"")
                 elif float is calc8:
                     listbox.insert(END,"PERSONAL DATA LEAK [Score: "+calcS8+"]")
-                    listbox.insert(END,"Personal details send between your device and the server")
+                    listbox.insert(END,"Personal details sent between your device and the server")
                     listbox.insert(END,"could be read by the attacker, and if they are not well")
                     listbox.insert(END,"encrypted, they can read all your personal details.")
                     listbox.insert(END,"LOWERING RISK: Check your device uses strong encryption")
