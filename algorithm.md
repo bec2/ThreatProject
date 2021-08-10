@@ -1,4 +1,5 @@
 #THE ALGORITHM - HOW IT WORKS
+
 This documentation is intended to explain and justify the design of the calculator in the software. It is intended for those with strong background knowledge of threat modelling.
 
 The algorithm takes elements from STRIDE, CVSS, and LINDUNN GO.
@@ -36,6 +37,7 @@ The switched-on categories will then turn on the associated threat numbers. Thes
 - Cat 3: S(3), T(6 7), I(9), D(13 14), E(15 16)
 - Cat 4: S(2), T(5), I(8 11), D(13), E(15)
 - Cat 5: S(3), T(6 7), I(9), D(14), E(16)
+
 The risk score added per STRIDE number is the average of the 3 different CVSS scores (see paper) for that threat.
 
 Each category also has a number of POTENTIAL associated LINDUNN GO factors (again, individual devices would vary, but it is not feasible to analyse every brand and product for this project).
