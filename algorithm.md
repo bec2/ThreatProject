@@ -9,7 +9,7 @@ Firstly, the the devices the user selects are sorted into the following five cat
 - Devices generally requiring sign-in to function (2)
 - Devices communicating on the internal network (3)
 - Devices communicating with external entities via the internet (4)
--Devices directly affecting home physical security (5)
+- Devices directly affecting home physical security (5)
 
 The key to device categories is as follows:
 - Home virtual assistant (1 2 3 4 5)
