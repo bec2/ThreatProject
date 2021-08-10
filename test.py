@@ -479,6 +479,26 @@ def page2():
         def clickExitBtn2(self):
             exit()
 
+        #Glossary for the terms on this page that might not be known
+        def clickGBtn(self):
+            top = Toplevel(root)
+            top.geometry("600x250")
+            top.title("Glossary")
+            Label(top, text="2FA", font=('Geneva 12')).place(x=10, y=10)
+            Label(top, text="A form of security that requires 2 identification steps to log in, e.g. a password and a ",
+                  font=('Geneva 10')).place(x=10, y=30)
+            Label(top, text="code sent to your phone.", font=('Geneva 10')).place(x=10, y=50)
+            Label(top, text="Router", font=('Geneva 12')).place(x=10, y=80)
+            Label(top, text="The box you connect to in order to get Wi-Fi.",
+                  font=('Geneva 10')).place(x=10, y=100)
+            Label(top, text="Patch", font=('Geneva 12')).place(x=10, y=130)
+            Label(top, text="The latest update to your device or software that fixes some things from prior versions.",
+                  font=('Geneva 10')).place(x=10, y=150)
+            Label(top, text="Digital traffic", font=('Geneva 12')).place(x=10, y=180)
+            Label(top, text="The signals being sent out and received from digital devices.",
+                  font=('Geneva 10')).place(x=10, y=200)
+            
+            
         def clickNextBtn2(self):
             self.pack_forget()
             self.c1.forget()
@@ -600,6 +620,9 @@ def page2():
             #buttons        
             exitButton2 = Button(self, text="Quit", command=self.clickExitBtn2)
             exitButton2.place(x=70, y=140)
+
+            glossButton = Button(self, text="Glossary", command=self.clickGBtn)
+            glossButton.place(x=390, y=140)
 
             nextButton2 = Button(self, text="Next", command=self.clickNextBtn2)
             nextButton2.place(x=750, y=140)
