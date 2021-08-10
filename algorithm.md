@@ -24,6 +24,7 @@ The key to device categories is as follows:
 - Automated 'smart home' controller* (1 2 3 4 5)
 - Smart sleep tracker (2 3)
 - Any other smart home devices** (1 2 3 4 5)
+
 Obviously, these are just averages or assumptions based on what most devices of these types do. In a more developed version of the program, individual makes/models and their unique capabilities could be taken into consideration.
 
 1* These fulfil generally the same exact functions as the virtual assistant hub and often have touchscreens as well.
