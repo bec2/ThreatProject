@@ -1284,6 +1284,24 @@ def page3():
 
         def clickExitBtn3(self):
             exit()
+
+        def clickGBtn2(self):
+            top2 = Toplevel(root)
+            top2.geometry("600x250")
+            top2.title("Glossary")
+            Label(top2, text="2-Factor-Authentication", font=('Geneva 12')).place(x=10, y=10)
+            Label(top2, text="A form of security that requires 2 identification steps to log in, e.g. a password and a ",
+                  font=('Geneva 10')).place(x=10, y=30)
+            Label(top2, text="code sent to your phone.", font=('Geneva 10')).place(x=10, y=50)
+            Label(top2, text="Administrator", font=('Geneva 12')).place(x=10, y=80)
+            Label(top2, text="Someone with the highest privileges on the system. They can control many things.",
+                  font=('Geneva 10')).place(x=10, y=100)
+            Label(top2, text="Encryption", font=('Geneva 12')).place(x=10, y=130)
+            Label(top2, text="Using a cipher to conceal the real 'plaintext' contents of some data.",
+                  font=('Geneva 10')).place(x=10, y=150)
+            Label(top2, text="Server", font=('Geneva 12')).place(x=10, y=180)
+            Label(top2, text="An external entity that a device usually connects with via the Internet.",
+                  font=('Geneva 10')).place(x=10, y=200)
             
         #further guidance tab
         def clickFurtherBtn(self):
@@ -1347,6 +1365,9 @@ def page3():
 
             furtherButton = Button(self, text="More advice", command=self.clickFurtherBtn)
             furtherButton.place(x=70, y=90)
+
+            glossButton2 = Button(self, text="Glossary",command=self.clickGBtn2)
+            glossButton2.place(x=70, y=130)
 
             hint1 = Label(self, text="Hint: Hover the mouse over ", font="Geneva 10")
             hint2 = Label(self, text="the box and use the mouse  ", font="Geneva 10")
