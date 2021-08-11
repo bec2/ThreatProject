@@ -677,7 +677,7 @@ def calculator():
     else:
         pass
 
-    #Recall the strideOn values before we use them 
+    #Recall the values before we use them 
     global strideOn1
     global strideOn2
     global strideOn3
@@ -694,6 +694,23 @@ def calculator():
     global strideOn14
     global strideOn15
     global strideOn16
+
+    global calc1
+    global calc2
+    global calc3
+    global calc4
+    global calc5
+    global calc6
+    global calc7
+    global calc8
+    global calc9
+    global calc10
+    global calc11
+    global calc12
+    global calc13
+    global calc14
+    global calc15
+    global calc16
 
     #Turn on correct strideOn values per subcategory
     if catVoice == 1:
@@ -744,105 +761,84 @@ def calculator():
     else:
         pass
 
-    
-    #Delete sub categories depending on what risks are turned off
-    #mDepending on if there is time for extra features
-    #It would require all the avenues to be blocked for the threat to be deleted
-
     #Add stride cvss scores into totals if those stride values are on
     #This could probably be made more elegant with arrays if there is time
     if strideOn1 == 1:
-        global calc1
         calc1 = stride1
     else:
         pass
 
     if strideOn2 == 1:
-        global calc2
         calc2 = stride2
     else:
         pass
 
     if strideOn3 == 1:
-        global calc3
         calc3 = stride3
     else:
         pass
 
     if strideOn4 == 1:
-        global calc4
         calc4 = stride4
     else:
         pass
 
     if strideOn5 == 1:
-        global calc5
         calc5 = stride5
     else:
         pass
 
     if strideOn6 == 1:
-        global calc6
         calc6 = stride6
     else:
         pass
 
     if strideOn7 == 1:
-        global calc7
         calc7 = stride7
     else:
         pass
 
     if strideOn8 == 1:
-        global calc8
         calc8 = stride8
     else:
         pass
 
     if strideOn9 == 1:
-        global calc9
         calc9 = stride9
     else:
         pass
 
     if strideOn10 == 1:
-        global calc10
         calc10 = stride10
     else:
         pass
 
     if strideOn11 == 1:
-        global calc11
         calc11 = stride11
     else:
         pass
 
     if strideOn12 == 1:
-        global calc12
         calc12 = stride12
     else:
         pass
 
     if strideOn13 == 1:
-        global calc13
         calc13 = stride13
     else:
         pass
 
     if strideOn14 == 1:
-        global calc14
         calc14 = stride14
     else:
         pass
 
     if strideOn15 == 1:
-        global calc15
         calc15 = stride15
     else:
         pass
 
     if strideOn16 == 1:
-        global calc16
         calc16 = stride16
     else:
         pass
@@ -1212,6 +1208,137 @@ def calculator():
     else:
         pass
 
+    #take away 1 from scores if appropriate mitigations are indicated in risk values
+    #see docs for explanation
+    if checkB1 == 0:
+        if calc2 > 0:
+            calc2 = calc2 - 1
+        else:
+            pass
+        if calc3 > 0:
+            calc3 = calc3 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB2 == 0:
+        if calc1 > 0:
+            calc1 = calc1 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB3 == 0:
+        if calc8 > 0:
+            calc8 = calc8 - 1
+        else:
+            pass
+        if calc15 > 0:
+            calc15 = calc15 - 1
+        else:
+            pass
+        if calc16 > 0:
+            calc16 = calc16 - 1
+        else:
+            pass
+        if calc9 > 0:
+            calc9 = calc9 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB4 == 0:
+        if calc8 > 0:
+            calc8 = calc8 - 1
+        else:
+            pass
+        if calc16 > 0:
+            calc16 = calc16 - 1
+        else:
+            pass
+        if calc9 > 0:
+            calc9 = calc9 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB5 == 0:
+        if calc10 > 0:
+            calc10 = calc10 - 1
+        else:
+            pass
+        if calc12 > 0:
+            calc12 = calc12 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB6 == 0:
+        if calc11 > 0:
+            calc11 = calc11 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB8 == 0:
+        if calc15 > 0:
+            calc15 = calc15 - 1
+        else:
+            pass
+        if calc16 > 0:
+            calc16 = calc16 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB9 == 0:
+        if calc13 > 0:
+            calc13 = calc13 - 1
+        else:
+            pass
+        if calc14 > 0:
+            calc14 = calc14 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB10 == 0:
+        if calc13 > 0:
+            calc13 = calc13 - 1
+        else:
+            pass
+        if calc14 > 0:
+            calc14 = calc14 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB12 == 0:
+        if calc9 > 0:
+            calc9 = calc9 - 1
+        else:
+            pass
+    else:
+        pass
+
+    if checkB13 == 0:
+        if calc11 > 0:
+            calc11 = calc11 - 1
+        else:
+            pass
+    else:
+        pass
+
+
     #add lindunn scores
     #this is being done separately to the cvss score for ease of anyone reading the code
     #see docs for why these scores in particular are used
@@ -1263,6 +1390,12 @@ def calculator():
         app.pack_forget()
     else:
         app.pack_forget()
+
+    #if we mitigated all avenues for private conversation leak, we can remove it
+    if checkB6 == 0 and checkB13 == 0:
+        calc11 = 0
+    else:
+        pass
 
     #Put all our results in a list so we can sort them
     global calcList2

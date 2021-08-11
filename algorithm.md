@@ -56,15 +56,7 @@ The switched-on categories will then turn on the associated threat numbers. Thes
 
 The risk score added per STRIDE number is the average of the 3 different CVSS scores (see paper) for that threat.
 
-Each category also has a number of POTENTIAL associated LINDUNN GO factors (again, individual devices would vary, but it is not feasible to analyse every brand and product for this project).
-- Cat 1 has 11 factors: linkable user actions, linkability of retrieved data, actions identifying user, non-repudiation of sending, non-repudiation of received data, no transparency, disproportionate collection, unlawful processing, disproportionate processing, identifiability from shared data, identifiability from inbound data.
-- Cat 2 has 17 factors: linkable user credentials, linkable user actions, linkable inbound data, linkable shared data, linkable stored data, linkable retrieved data, identifying credentials, actions identifying user, identifying inbound data, identifying shared data, identifying retrieved data, non-repudiation of sending, non-repudiation of storage, non-repudiation of retrieval, disproportionate collection, unlawful processing, disproportionate storage.
-- Cat 3 has 4 factors: linkable credentials, linkable context, identifiable context, detectable outliers.
-- Cat 4 has 10 factors: linkable inbound data, linkable shared data, linkable retrieved data, identifying shared data, identifying retrieved data, detectable outliers, disproportionate collection, unlawful processing, disproportionate processing, disproportionate storage.
-- Cat5 has 4 factors: linkable user actions, linkable context, identifying context, detectable outliers.
-A score is added to each risk in the category based on the number of LINDUNN GO categories flagged by the device type, multiplied by 0.5. This 0.5 was chosen as some device types have a very large amount of associated GO factors compared to others, so dividing the total by 2 reduces overly-skewed results.
-
-Finally, the risk factors toggled by the user will also add a value to the score, based on how easy it might be for a stranger to manipulate the risk factor to form an attack. These scores go from 1 (the attacker would have a hard time utilizing this specific route though it is still possible) to 3 (relatively easy to manipulate). Obviously there is a degree of opinion to these values, but it would be very simple to change them in the code to better suit future developments in knowledge.
+Now, the risk factors toggled by the user will also add a value to the score, based on how easy it might be for a stranger to manipulate the risk factor to form an attack. These scores go from 1 (the attacker would have a hard time utilizing this specific route though it is still possible) to 3 (relatively easy to manipulate). Obviously there is a degree of opinion to these values, but it would be very simple to change them in the code to better suit future developments in knowledge. The STRIDE values match to their corresponding calc variable.
 - R1: value 3, related STRIDEs 2 3 5 6 7 8 9 12 13 14 15 16, justification: it is incredibly easy to snoop on traffic in an unprotected network.
 - R2: value 1, related STRIDEs 1 6, justification: this removes a step of complexity in gaining account access although the attacker must still manage to crack the first passcode in most cases
 - R3: value 2, related STRIDEs 2 3 5 6 7 8 9 12 13 14 15 16, justification: the default passwords on many models of router can be brute forced with little effort but this depends on the victim having certain models of router
@@ -79,3 +71,28 @@ Finally, the risk factors toggled by the user will also add a value to the score
 - R12: value 2, related STRIDEs 9, justification: based on usage traffic patterns (even encrypted ones) an attacker can easily find out when someone is not home and use that information maliciously
 - R13: value 1, related STRIDEs 11, justification: this risk relies on the third party having malicious actors within it
 - R14: value 1, related STRIDEs 11, justification: this relies on a manufacturer being malicious
+
+Now, we can take away 1 from calc scores for each potential mitigation for the threat is in place (by virtue of the opposite risk factor not being turned on). A threat value (calc) is not allowed to go below 0:
+- If R1 is not on, reduce the threat values for fake server signals and fake device signals.
+- If R2 is not on, reduce the threat value for outsider commands.
+- If R3 is not on, reduce the threat values for personal data leaks, compromised server signals, compromised action signals, and action leaks.
+- If R4 is not on, reduce the threat values for personal data leaks, compromised action signals, and action leaks.
+- If R5 is not on, reduce the threat values for eavesdroppers and interfering commands.
+- If R6 is not on, reduce the threat value for private conversation leaks.
+- If R8 is not on, reduce the threat values for compromised server signals and compromised action signals.
+- If R9 is not on, reduce the threat values for congesting server signals and congesting action signals.
+- If R10 is not on, reduce the threat values for congesting server signals and congesting action signals.
+- If R12 is not on, reduce the threat value for action leaks.
+- If R13 is not on, reduce the threat value for private conversation leaks.
+
+Each category also has a number of POTENTIAL associated LINDUNN GO factors (again, individual devices would vary, but it is not feasible to analyse every brand and product for this project).
+- Cat 1 has 11 factors: linkable user actions, linkability of retrieved data, actions identifying user, non-repudiation of sending, non-repudiation of received data, no transparency, disproportionate collection, unlawful processing, disproportionate processing, identifiability from shared data, identifiability from inbound data.
+- Cat 2 has 17 factors: linkable user credentials, linkable user actions, linkable inbound data, linkable shared data, linkable stored data, linkable retrieved data, identifying credentials, actions identifying user, identifying inbound data, identifying shared data, identifying retrieved data, non-repudiation of sending, non-repudiation of storage, non-repudiation of retrieval, disproportionate collection, unlawful processing, disproportionate storage.
+- Cat 3 has 4 factors: linkable credentials, linkable context, identifiable context, detectable outliers.
+- Cat 4 has 10 factors: linkable inbound data, linkable shared data, linkable retrieved data, identifying shared data, identifying retrieved data, detectable outliers, disproportionate collection, unlawful processing, disproportionate processing, disproportionate storage.
+- Cat5 has 4 factors: linkable user actions, linkable context, identifying context, detectable outliers.
+A score is added to each risk in the category based on the number of LINDUNN GO categories flagged by the device type, multiplied by 0.5. This 0.5 was chosen as some device types have a very large amount of associated GO factors compared to others, so dividing the total by 2 reduces overly-skewed results.
+
+Finally, if we have covered both mitigations for private conversation leaks (shown by R6 and 13 both being unselected), we can remove calc11 by setting it to 0 as it is no longer a problem.
+
+The remaining results will be sorted and have any 0 results removed so they can be output to the user in descending order (biggest threats first).
