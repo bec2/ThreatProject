@@ -529,6 +529,9 @@ def page2():
             text2=Label(self, text="Tick the boxes if the following apply to you.",
                         font=("Geneva 15"), bg='#996Db6')
             text2.place(x=70, y=50)
+            text3=Label(self, text="Click 'Glossary' if you don't understand a term.",
+                        font=("Geneva 15"), bg='#996Db6')
+            text3.place(x=70, y=75)
 
             #new checkboxes for risk factors
 
