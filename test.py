@@ -578,7 +578,7 @@ def page2():
             self.c7.pack()
 
             self.c8=Checkbutton(root,
-                                text="I don't have all my devices updates to the most recent patch.",
+                                text="I don't have all my devices updated to the most recent patch.",
                                 variable=checkB8, onvalue=1, offvalue=0,
                                 command=clickB8)
             self.c8.pack()
