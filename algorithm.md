@@ -19,7 +19,7 @@ This documentation is intended to explain and justify the design of the calculat
 
 The algorithm takes elements from STRIDE, CVSS, and LINDUNN GO.
 
-Firstly, the the devices the user selects are sorted into the following five categories. A device can be in more than one category at once. If at least one device per category is added, that category is switched on for the calculations.
+Firstly, the devices the user selects are sorted into the following five categories. A device can be in more than one category at once. If at least one device per category is added, that category is switched on for the calculations.
 - Voice input devices (Cat1)
 - Devices generally requiring sign-in to function (2)
 - Devices communicating on the internal network (3)
@@ -60,7 +60,7 @@ Now, the risk factors toggled by the user will also add a value to the score, ba
 - R1: value 3, related STRIDEs 2 3 5 6 7 8 9 12 13 14 15 16, justification: it is incredibly easy to snoop on traffic in an unprotected network.
 - R2: value 1, related STRIDEs 1 6, justification: this removes a step of complexity in gaining account access although the attacker must still manage to crack the first passcode in most cases
 - R3: value 2, related STRIDEs 2 3 5 6 7 8 9 12 13 14 15 16, justification: the default passwords on many models of router can be brute forced with little effort but this depends on the victim having certain models of router
-- R4: value 2, related STRIDEs 2 3 6 9 15 16, justification: weak passwords are easily bruteforced but doing this still requires significant processing power in many cases
+- R4: value 2, related STRIDEs 2 3 6 9 15 16, justification: weak passwords are easily brute-forced but doing this still requires significant processing power in many cases
 - R5: value 1, related STRIDEs 1 4 10 12, justification: manipulating this would require an attacker to position themselves very close to the victim at an opportune moment
 - R6: value 1, related STRIDEs 11, justification: there are multiple documented cases of employees hearing private conversations through this processing though obviously it depends on a malicious employee happening to hear a specific thing
 - R7: value 2, related STRIDEs 1 11 12, justification: a malicious skill/app can turn on the listening mode but this requires the user to have the skill/app in the first place or for the attacker to be able to escalate privileges high enough to toggle the mic
