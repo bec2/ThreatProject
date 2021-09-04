@@ -1,4 +1,4 @@
-#    Copyright (C) 2021  Beckett Hamilton
+#    Copyright (C) 2021  Beckett LeClair
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
