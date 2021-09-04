@@ -1,6 +1,6 @@
 My Threat Model
 
-To start the application, run the supplied executable file.
+To start the application, run the supplied executable file. Alternatively, if you have Python installed on your computer, you can run it from test.py instead.
 
 This application is designed to let home users learn more about the threat environment facing their IoT devices. It allows users to model their environment by selecting devices and risk factors, and then ranks threats according to the level of risks, also giving more details about why each one is a risk and some potential ways it could be mitigated. Scores are dimensionless and are calculated based on user inputs, giving a relative point of comparison for severity.
 
